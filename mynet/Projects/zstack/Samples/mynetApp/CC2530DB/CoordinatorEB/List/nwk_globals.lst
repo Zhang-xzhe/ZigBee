@@ -1,0 +1,779 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:30:59 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\stack\nwk\nwk_globals.c                         #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\stack\nwk\nwk_globals.c -D ZTOOL_P1 -D MT_TASK  #
+#                          -D MT_SYS_FUNC -D MT_ZDO_FUNC -D                   #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\CoordinatorEB\List\ -lA                    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\ --diag_suppress Pe001,Pa010 -o                 #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\nwk_globals.lst                                 #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\nwk_globals.r51                                  #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\stack\nwk\nwk_globals.c
+      1          /**************************************************************************************************
+      2            Filename:       nwk_globals.c
+      3            Revised:        $Date: 2010-01-11 09:24:44 -0800 (Mon, 11 Jan 2010) $
+      4            Revision:       $Revision: 21474 $
+      5          
+      6            Description:    User definable Network Parameters.
+      7          
+      8          
+      9            Copyright 2004-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com. 
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41           * INCLUDES
+     42           */
+     43          #include "ZComdef.h"
+     44          #include "OSAL.h"
+     45          #include "AddrMgr.h"
+     46          #include "AssocList.h"
+     47          #include "BindingTable.h"
+     48          #include "nwk_util.h"
+     49          #include "nwk_globals.h"
+     50          #include "APS.h"
+     51          #include "ssp.h"
+     52          #include "rtg.h"
+     53          #include "ZDConfig.h"
+     54          #include "ZGlobals.h"
+     55          
+     56          #if defined ( LCD_SUPPORTED )
+     57            #include "OnBoard.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+
+  typedef void (*halUARTCBack_t) (uint8 port, uint8 event);
+                                                          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",119  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    halUARTCBack_t      callBackFunc;
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",141  Error[Pe020]: 
+          identifier "halUARTCBack_t" is undefined
+     58          #endif
+     59          
+     60          /* HAL */
+     61          #include "hal_lcd.h"
+     62          
+     63          /*********************************************************************
+     64           * MACROS
+     65           */
+     66          
+     67          /*********************************************************************
+     68           * CONSTANTS
+     69           */
+     70          
+     71          // Maximums for the data buffer queue
+     72          #define NWK_MAX_DATABUFS_WAITING    8     // Waiting to be sent to MAC
+     73          #define NWK_MAX_DATABUFS_SCHEDULED  5     // Timed messages to be sent
+     74          #define NWK_MAX_DATABUFS_CONFIRMED  5     // Held after MAC confirms
+     75          #define NWK_MAX_DATABUFS_TOTAL      12    // Total number of buffers
+     76          
+     77          // 1-255 (0 -> 256) X RTG_TIMER_INTERVAL
+     78          // A known shortcoming is that when a message is enqueued as "hold" for a
+     79          // sleeping device, the timer tick may have counted down to 1, so that msg
+     80          // will not be held as long as expected. If NWK_INDIRECT_MSG_TIMEOUT is set to 1
+     81          // the hold time will vary randomly from 0 - CNT_RTG_TIMER ticks.
+     82          // So the hold time will vary within this interval:
+     83          // { (NWK_INDIRECT_MSG_TIMEOUT-1)*CNT_RTG_TIMER,
+     84          //                                    NWK_INDIRECT_MSG_TIMEOUT*CNT_RTG_TIMER }
+     85          #define NWK_INDIRECT_CNT_RTG_TMR    1
+     86          // To hold msg for sleeping end devices for 30 secs:
+     87          // #define CNT_RTG_TIMER            1
+     88          // #define NWK_INDIRECT_MSG_TIMEOUT 30
+     89          // To hold msg for sleeping end devices for 30 mins:
+     90          // #define CNT_RTG_TIMER            60
+     91          // #define NWK_INDIRECT_MSG_TIMEOUT 30
+     92          // To hold msg for sleeping end devices for 30 days:
+     93          // #define CNT_RTG_TIMER            60
+     94          // #define NWK_INDIRECT_MSG_TIMEOUT (30 * 24 * 60)
+     95          // Maximum msgs to hold per associated device.
+     96          #define NWK_INDIRECT_MSG_MAX_PER    3
+     97          // Maximum total msgs to hold for all associated devices.
+     98          #define NWK_INDIRECT_MSG_MAX_ALL    \
+     99                                      (NWK_MAX_DATABUFS_TOTAL - NWK_INDIRECT_MSG_MAX_PER)
+    100          
+    101          /*********************************************************************
+    102           * TYPEDEFS
+    103           */
+    104          
+    105          /*********************************************************************
+    106           * NWK GLOBAL VARIABLES
+    107           */
+    108          
+    109          // Variables for MAX list size
+    110          CONST uint16 gNWK_MAX_DEVICE_LIST = NWK_MAX_DEVICES;
+    111          
+    112          // Variables for MAX Sleeping End Devices
+    113          CONST uint8 gNWK_MAX_SLEEPING_END_DEVICES = NWK_MAX_DEVICES - NWK_MAX_ROUTERS;
+    114          
+    115          // Variables for MAX data buffer levels
+    116          CONST uint8 gNWK_MAX_DATABUFS_WAITING = NWK_MAX_DATABUFS_WAITING;
+    117          CONST uint8 gNWK_MAX_DATABUFS_SCHEDULED = NWK_MAX_DATABUFS_SCHEDULED;
+    118          CONST uint8 gNWK_MAX_DATABUFS_CONFIRMED = NWK_MAX_DATABUFS_CONFIRMED;
+    119          CONST uint8 gNWK_MAX_DATABUFS_TOTAL = NWK_MAX_DATABUFS_TOTAL;
+    120          
+    121          CONST uint8 gNWK_INDIRECT_CNT_RTG_TMR = NWK_INDIRECT_CNT_RTG_TMR;
+    122          CONST uint8 gNWK_INDIRECT_MSG_MAX_PER = NWK_INDIRECT_MSG_MAX_PER;
+    123          CONST uint8 gNWK_INDIRECT_MSG_MAX_ALL = NWK_INDIRECT_MSG_MAX_ALL;
+    124          
+    125          // change this if using a different stack profile...
+    126          // Cskip array
+    127          uint16 *Cskip;
+    128          
+    129          #if ( STACK_PROFILE_ID == ZIGBEEPRO_PROFILE )
+    130            uint8 CskipRtrs[1] = {0};
+    131            uint8 CskipChldrn[1] = {0};
+    132          #elif ( STACK_PROFILE_ID == HOME_CONTROLS )
+    133            uint8 CskipRtrs[MAX_NODE_DEPTH+1] = {6,6,6,6,6,0};
+    134            uint8 CskipChldrn[MAX_NODE_DEPTH+1] = {20,20,20,20,20,0};
+    135          #elif ( STACK_PROFILE_ID == GENERIC_STAR )
+    136            uint8 CskipRtrs[MAX_NODE_DEPTH+1] = {5,5,5,5,5,0};
+    137            uint8 CskipChldrn[MAX_NODE_DEPTH+1] = {5,5,5,5,5,0};
+    138          #elif ( STACK_PROFILE_ID == NETWORK_SPECIFIC )
+    139            uint8 CskipRtrs[MAX_NODE_DEPTH+1] = {5,5,5,5,5,0};
+    140            uint8 CskipChldrn[MAX_NODE_DEPTH+1] = {5,5,5,5,5,0};
+    141          #endif // STACK_PROFILE_ID
+    142          
+    143          // Minimum lqi value that is required for association
+    144          uint8 gMIN_TREE_LINK_COST = MIN_LQI_COST_3;
+    145          
+    146          // Statically defined Associated Device List
+    147          associated_devices_t AssociatedDevList[NWK_MAX_DEVICES];
+    148          
+    149          CONST uint8 gMAX_RTG_ENTRIES = MAX_RTG_ENTRIES;
+    150          CONST uint8 gMAX_RTG_SRC_ENTRIES = MAX_RTG_SRC_ENTRIES;
+    151          CONST uint8 gMAX_RREQ_ENTRIES = MAX_RREQ_ENTRIES;
+    152          
+    153          CONST uint8 gMAX_NEIGHBOR_ENTRIES = MAX_NEIGHBOR_ENTRIES;
+    154          
+    155           // Table of neighboring nodes (not including child nodes)
+    156          neighborEntry_t neighborTable[MAX_NEIGHBOR_ENTRIES];
+    157          
+    158          CONST uint8 gMAX_SOURCE_ROUTE = MAX_SOURCE_ROUTE;
+    159          
+    160          CONST uint8 gMAX_BROADCAST_QUEUED = MAX_BROADCAST_QUEUED;
+    161          
+    162          // Routing table
+    163          rtgEntry_t rtgTable[MAX_RTG_ENTRIES];
+    164          
+    165          #if defined ( ZIGBEE_SOURCE_ROUTING )
+    166            rtgSrcEntry_t rtgSrcTable[MAX_RTG_SRC_ENTRIES];
+    167            uint16 rtgSrcRelayList[MAX_SOURCE_ROUTE];
+    168          #endif
+    169          
+    170          // Table of current RREQ packets in the network
+    171          rtDiscEntry_t rtDiscTable[MAX_RREQ_ENTRIES];
+    172          
+    173          // Table of data broadcast packets currently in circulation.
+    174          bcastEntry_t bcastTable[MAX_BCAST];
+    175          
+    176          // These 2 arrays are to be used as an array of struct { uint8, uint32 }.
+    177          uint8 bcastHoldHandle[MAX_BCAST];
+    178          uint32 bcastHoldAckMask[MAX_BCAST];
+    179          
+    180          CONST uint8 gMAX_BCAST = MAX_BCAST;
+    181          
+    182          // For tree addressing, this switch allows the allocation of a 
+    183          // router address to an end device when end device address are 
+    184          // all used up.  If this option is enabled, address space
+    185          // could be limited.
+    186          CONST uint8 gNWK_TREE_ALLOCATE_ROUTERADDR_FOR_ENDDEVICE = FALSE;
+    187          
+    188          #if defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
+    189          // number of link status periods after the last received address conflict report
+    190          // (network status command)
+    191          CONST uint8 gNWK_CONFLICTED_ADDR_EXPIRY_TIME = NWK_CONFLICTED_ADDR_EXPIRY_TIME;
+    192          #endif
+    193          
+    194          #if defined ( ZIGBEE_FREQ_AGILITY )
+    195          CONST uint8 gNWK_FREQ_AGILITY_ALL_MAC_ERRS = NWK_FREQ_AGILITY_ALL_MAC_ERRS;
+    196          #endif
+    197            
+    198          /*********************************************************************
+    199           * APS GLOBAL VARIABLES
+    200           */
+    201          
+    202          // The Maximum number of binding records
+    203          // This number is defined in BindingTable.h - change it there.
+    204          CONST uint16 gNWK_MAX_BINDING_ENTRIES = NWK_MAX_BINDING_ENTRIES;
+    205          
+    206          #if defined ( REFLECTOR )
+    207            // The Maximum number of cluster IDs in a binding record
+    208            // This number is defined in BindingTable.h - change it there.
+    209            CONST uint8 gMAX_BINDING_CLUSTER_IDS = MAX_BINDING_CLUSTER_IDS;
+    210          
+    211            CONST uint16 gBIND_REC_SIZE = sizeof( BindingEntry_t );
+    212          
+    213            // Binding Table
+    214            BindingEntry_t BindingTable[NWK_MAX_BINDING_ENTRIES];
+    215          #endif
+    216          
+    217          // Maximum number allowed in the groups table.
+    218          CONST uint8 gAPS_MAX_GROUPS = APS_MAX_GROUPS;
+    219          
+    220          // APS End Device Broadcast Table
+    221          #if ( ZG_BUILD_ENDDEVICE_TYPE )
+    222            apsEndDeviceBroadcast_t apsEndDeviceBroadcastTable[APS_MAX_ENDDEVICE_BROADCAST_ENTRIES];
+    223            uint8 gAPS_MAX_ENDDEVICE_BROADCAST_ENTRIES = APS_MAX_ENDDEVICE_BROADCAST_ENTRIES;
+    224          #endif
+    225          
+    226          /*********************************************************************
+    227           * SECURITY GLOBAL VARIABLES
+    228           */
+    229          
+    230          // This is the default pre-configured key,
+    231          // change this to make a unique key
+    232          // SEC_KEY_LEN is defined in ssp.h.
+    233          CONST uint8 defaultKey[SEC_KEY_LEN] =
+    234          {
+    235          #if defined ( APP_TP ) || defined ( APP_TP2 )
+    236            // Key for ZigBee Conformance Testing
+    237            0xbb, 0xbb, 0xbb, 0xbb, 0xbb, 0xbb, 0xbb, 0xbb,
+    238            0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa, 0xaa
+    239          #else
+    240            // Key for In-House Testing
+    241            0x00, 0x01, 0x02, 0x03, 0x04, 0x05, 0x06, 0x07,
+    242            0x08, 0x09, 0x0A, 0x0B, 0x0C, 0x0D, 0x0E, 0x0F
+    243          #endif
+    244          };
+    245          
+    246          // This is the default pre-configured Trust Center Link key,
+    247          // change this to make a unique key, SEC_KEY_LEN is defined in ssp.h.
+    248          CONST uint8 defaultTCLinkKey[SEC_KEY_LEN] =
+    249          {
+    250            0x56, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77,
+    251            0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77, 0x77
+    252          };
+    253          
+    254          /*********************************************************************
+    255           * STATUS STRINGS
+    256           */
+    257          #if defined ( LCD_SUPPORTED )
+    258            const char PingStr[]         = "Ping Rcvd from";
+    259            const char AssocCnfStr[]     = "Assoc Cnf";
+    260            const char SuccessStr[]      = "Success";
+    261            const char EndDeviceStr[]    = "EndDevice:";
+    262            const char ParentStr[]       = "Parent:";
+    263            const char ZigbeeCoordStr[]  = "ZigBee Coord";
+    264            const char NetworkIDStr[]    = "Network ID:";
+    265            const char RouterStr[]       = "Router:";
+    266            const char OrphanRspStr[]    = "Orphan Response";
+    267            const char SentStr[]         = "Sent";
+    268            const char FailedStr[]       = "Failed";
+    269            const char AssocRspFailStr[] = "Assoc Rsp fail";
+    270            const char AssocIndStr[]     = "Assoc Ind";
+    271            const char AssocCnfFailStr[] = "Assoc Cnf fail";
+    272            const char EnergyLevelStr[]  = "Energy Level";
+    273            const char ScanFailedStr[]   = "Scan Failed";
+    274          #endif
+    275          
+    276          /*********************************************************************
+    277           * @fn       nwk_globals_init()
+    278           *
+    279           * @brief
+    280           *
+    281           *   Initialize nwk layer globals.  These are the system defaults and
+    282           *   should be changed by the user here.  The default definitions are
+    283           *   defined in nwk.h or NLMEDE.h.
+    284           *
+    285           * @param   none
+    286           *
+    287           * @return  none
+    288           */
+    289          void nwk_globals_init( void )
+    290          {
+    291            AddrMgrInit( NWK_MAX_ADDRESSES );
+    292            
+    293          #if !defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
+    294            if ( ZSTACK_ROUTER_BUILD )
+    295            {
+    296              // Initialize the Cskip Table
+    297              Cskip = osal_mem_alloc(sizeof(uint16) *(MAX_NODE_DEPTH+1));
+    298              RTG_FillCSkipTable(CskipChldrn, CskipRtrs, MAX_NODE_DEPTH, Cskip);
+    299            }
+    300          #endif
+    301            
+    302            // To compile out the Link Status Feature, set NWK_LINK_STATUS_PERIOD
+    303            // to 0 (compiler flag).
+    304            if ( ZSTACK_ROUTER_BUILD && NWK_LINK_STATUS_PERIOD )
+    305            {
+    306              NLME_InitLinkStatus();
+    307            }
+    308            
+    309          #if defined ( ZIGBEE_FREQ_AGILITY )
+    310            NwkFreqAgilityInit();
+    311          #endif
+    312          }
+    313          
+    314          /*********************************************************************
+    315           * @fn       NIB_init()
+    316           *
+    317           * @brief
+    318           *
+    319           *   Initialize attribute values in NIB
+    320           *
+    321           * @param   none
+    322           *
+    323           * @return  none
+    324           */
+    325          void NIB_init()
+    326          {
+    327            _NIB.SequenceNum = LO_UINT16(osal_rand());
+    328          
+    329            _NIB.nwkProtocolVersion = ZB_PROT_VERS;
+    330            _NIB.MaxDepth = MAX_NODE_DEPTH;
+    331          
+    332          #if ( NWK_MODE == NWK_MODE_MESH )
+    333            _NIB.beaconOrder = BEACON_ORDER_NO_BEACONS;
+    334            _NIB.superFrameOrder = BEACON_ORDER_NO_BEACONS;
+    335          #endif
+    336          
+    337            // BROADCAST SETTINGS:
+    338            // *******************
+    339            //   Broadcast Delivery Time
+    340            //     - set to multiples of 100ms 
+    341            //     - should be 500ms more than the retry time
+    342            //       -  "retry time" = PassiveAckTimeout * (MaxBroadcastRetries + 1)
+    343            //   Passive Ack Timeout
+    344            //     - set to multiples of 100ms 
+    345            _NIB.BroadcastDeliveryTime = zgBcastDeliveryTime;
+    346            _NIB.PassiveAckTimeout     = zgPassiveAckTimeout;
+    347            _NIB.MaxBroadcastRetries   = zgMaxBcastRetires;
+    348          
+    349            _NIB.ReportConstantCost = 0;
+    350            _NIB.RouteDiscRetries = 0;
+    351            _NIB.SecureAllFrames = USE_NWK_SECURITY;
+    352            _NIB.nwkAllFresh = NWK_ALL_FRESH;
+    353             
+    354            if ( ZG_SECURE_ENABLED )
+    355            {
+    356              _NIB.SecurityLevel = SECURITY_LEVEL;
+    357            }
+    358            else
+    359            {
+    360              _NIB.SecurityLevel = 0;
+    361            }
+    362             
+    363          #if defined ( ZIGBEEPRO )
+    364            _NIB.SymLink = FALSE;
+    365          #else
+    366            _NIB.SymLink = TRUE;
+    367          #endif  
+    368            
+    369            _NIB.CapabilityInfo = ZDO_Config_Node_Descriptor.CapabilityFlags;
+    370          
+    371            _NIB.TransactionPersistenceTime = zgIndirectMsgTimeout;
+    372          
+    373            _NIB.RouteDiscoveryTime = 5;
+    374            _NIB.RouteExpiryTime = zgRouteExpiryTime;
+    375          
+    376            _NIB.nwkDevAddress = INVALID_NODE_ADDR;
+    377            _NIB.nwkLogicalChannel = 0;
+    378            _NIB.nwkCoordAddress = INVALID_NODE_ADDR;
+    379            osal_memset( _NIB.nwkCoordExtAddress, 0, Z_EXTADDR_LEN );
+    380            _NIB.nwkPanId = INVALID_NODE_ADDR;
+    381          
+    382            osal_cpyExtAddr( _NIB.extendedPANID, zgExtendedPANID );
+    383             
+    384            _NIB.nwkKeyLoaded = FALSE;
+    385             
+    386          #if defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
+    387            _NIB.nwkAddrAlloc  = NWK_ADDRESSING_STOCHASTIC;
+    388            _NIB.nwkUniqueAddr = FALSE;
+    389          #else
+    390            _NIB.nwkAddrAlloc  = NWK_ADDRESSING_DISTRIBUTED;
+    391            _NIB.nwkUniqueAddr = TRUE;
+    392          #endif
+    393          
+    394            _NIB.nwkLinkStatusPeriod = NWK_LINK_STATUS_PERIOD; 
+    395            _NIB.nwkRouterAgeLimit = NWK_ROUTE_AGE_LIMIT;
+    396           
+    397            //MTO and source routing
+    398            _NIB.nwkConcentratorDiscoveryTime = zgConcentratorDiscoveryTime;
+    399            _NIB.nwkIsConcentrator = zgConcentratorEnable;
+    400            _NIB.nwkConcentratorRadius = zgConcentratorRadius;
+    401            _NIB.nwkSrcRtgExpiryTime = SRC_RTG_EXPIRY_TIME;
+    402          
+    403          #if defined ( ZIGBEE_MULTICAST )
+    404            _NIB.nwkUseMultiCast = TRUE;
+    405          #else
+    406            _NIB.nwkUseMultiCast = FALSE;
+    407          #endif  
+    408            _NIB.nwkManagerAddr = 0x0000;
+    409            _NIB.nwkUpdateId = 0;
+    410            _NIB.nwkTotalTransmissions = 0;
+    411          
+    412            if ( ZSTACK_ROUTER_BUILD )
+    413            {
+    414          #if defined ( ZIGBEE_STOCHASTIC_ADDRESSING )
+    415              NLME_InitStochasticAddressing();
+    416          #else
+    417              NLME_InitTreeAddressing();
+    418          #endif
+    419            }
+    420          }
+    421          
+    422          /*********************************************************************
+    423           * @fn       nwk_Status()
+    424           *
+    425           * @brief
+    426           *
+    427           *   Status report.
+    428           *
+    429           * @param   statusCode
+    430           * @param   statusValue
+    431           *
+    432           * @return  none
+    433           */
+    434          void nwk_Status( uint16 statusCode, uint16 statusValue )
+    435          {
+    436          #if defined ( LCD_SUPPORTED )
+    437            switch ( statusCode )
+    438            {
+    439              case NWK_STATUS_COORD_ADDR:
+    440                if ( ZSTACK_ROUTER_BUILD )
+    441                {
+    442                  HalLcdWriteString( (char*)ZigbeeCoordStr, HAL_LCD_LINE_1 );
+    443                  HalLcdWriteStringValue( (char*)NetworkIDStr, statusValue, 16, HAL_LCD_LINE_2 );
+    444                  BuzzerControl( BUZZER_BLIP );
+    445                }
+    446                break;
+    447          
+    448              case NWK_STATUS_ROUTER_ADDR:
+    449                if ( ZSTACK_ROUTER_BUILD )
+    450                {
+    451                  HalLcdWriteStringValue( (char*)RouterStr, statusValue, 16, HAL_LCD_LINE_1 );
+    452                }
+    453                break;
+    454          
+    455              case NWK_STATUS_ORPHAN_RSP:
+    456                if ( ZSTACK_ROUTER_BUILD )
+    457                {
+    458                  if ( statusValue == ZSuccess )
+    459                    HalLcdWriteScreen( (char*)OrphanRspStr, (char*)SentStr );
+    460                  else
+    461                    HalLcdWriteScreen( (char*)OrphanRspStr, (char*)FailedStr );
+    462                }
+    463                break;
+    464          
+    465              case NWK_ERROR_ASSOC_RSP:
+    466                if ( ZSTACK_ROUTER_BUILD )
+    467                {
+    468                  HalLcdWriteString( (char*)AssocRspFailStr, HAL_LCD_LINE_1 );
+    469                  HalLcdWriteValue( (uint32)(statusValue), 16, HAL_LCD_LINE_2 );
+    470                }
+    471                break;
+    472                
+    473              case NWK_STATUS_ED_ADDR:
+    474                if ( ZSTACK_END_DEVICE_BUILD )
+    475                {
+    476                  HalLcdWriteStringValue( (char*)EndDeviceStr, statusValue, 16, HAL_LCD_LINE_1 );
+    477                }
+    478                break;
+    479          
+    480              case NWK_STATUS_PARENT_ADDR:
+    481                      HalLcdWriteStringValue( (char*)ParentStr, statusValue, 16, HAL_LCD_LINE_2 );
+    482                break;
+    483          
+    484              case NWK_STATUS_ASSOC_CNF:
+    485                HalLcdWriteScreen( (char*)AssocCnfStr, (char*)SuccessStr );
+    486                break;
+    487          
+    488              case NWK_ERROR_ASSOC_CNF_DENIED:
+    489                HalLcdWriteString((char*)AssocCnfFailStr, HAL_LCD_LINE_1 );
+    490                HalLcdWriteValue( (uint32)(statusValue), 16, HAL_LCD_LINE_2 );
+    491                break;
+    492          
+    493              case NWK_ERROR_ENERGY_SCAN_FAILED:
+    494                HalLcdWriteScreen( (char*)EnergyLevelStr, (char*)ScanFailedStr );
+    495                break;
+    496            }
+    497          #endif
+    498          }
+    499          
+    500          /*********************************************************************
+    501          *********************************************************************/
+
+Errors: 25
+Warnings: 2

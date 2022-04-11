@@ -1,0 +1,586 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:31:02 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\mt\MT_TASK.c                                    #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\mt\MT_TASK.c -D ZTOOL_P1 -D MT_TASK -D          #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -lC C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proj #
+#                          ects\zstack\Samples\mynetApp\CC2530DB\CoordinatorE #
+#                          B\List\ -lA C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\Coor #
+#                          dinatorEB\List\ --diag_suppress Pe001,Pa010 -o     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\MT_TASK.lst                                     #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\MT_TASK.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\mt\MT_TASK.c
+      1          /***************************************************************************************************
+      2            Filename:       MT_TASK.c
+      3            Revised:        $Date: 2009-11-09 20:03:17 -0800 (Mon, 09 Nov 2009) $
+      4            Revision:       $Revision: 21106 $
+      5          
+      6            Description:    MonitorTest Task handling routines
+      7          
+      8            Copyright 2007 Texas Instruments Incorporated. All rights reserved.
+      9          
+     10            IMPORTANT: Your use of this Software is limited to those specific rights
+     11            granted under the terms of a software license agreement between the user
+     12            who downloaded the software, his/her employer (which must be your employer)
+     13            and Texas Instruments Incorporated (the "License").  You may not use this
+     14            Software unless you agree to abide by the terms of the License. The License
+     15            limits your use, and you acknowledge, that the Software may not be modified,
+     16            copied or distributed unless embedded on a Texas Instruments microcontroller
+     17            or used solely and exclusively in conjunction with a Texas Instruments radio
+     18            frequency transceiver, which is integrated into your product.  Other than for
+     19            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     20            works of, modify, distribute, perform, display or sell this Software and/or
+     21            its documentation for any purpose.
+     22          
+     23            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     24            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     25            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     26            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     27            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     28            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     29            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     30            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     31            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     32            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     33            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     34          
+     35            Should you have any questions regarding your right to use this Software,
+     36            contact Texas Instruments Incorporated at www.TI.com.
+     37          
+     38           ***************************************************************************************************/
+     39          
+     40          /***************************************************************************************************
+     41           * INCLUDES
+     42           ***************************************************************************************************/
+     43          #include "ZComDef.h"
+     44          #include "MT_TASK.h"
+     45          #include "MT.h"
+     46          #include "MT_DEBUG.h"
+     47          #include "MT_UART.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+
+  typedef void (*halUARTCBack_t) (uint8 port, uint8 event);
+                                                          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",119  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    halUARTCBack_t      callBackFunc;
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",141  Error[Pe020]: 
+          identifier "halUARTCBack_t" is undefined
+     48          #include "MT_UTIL.h"
+     49          #include "MT_SYS.h"
+     50          #include "MT_ZDO.h"
+     51          
+     52          #include "hal_uart.h"
+     53          
+     54          #include "OSAL_Memory.h"
+     55          
+     56          /***************************************************************************************************
+     57           * LOCAL FUNCTIONS
+     58           ***************************************************************************************************/
+     59          void MT_ProcessIncomingCommand( mtOSALSerialData_t *msg );
+     60          
+     61          /***************************************************************************************************
+     62           * GLOBALS
+     63           ***************************************************************************************************/
+     64          
+     65          /***************************************************************************************************
+     66           * @fn      MT_TaskInit
+     67           *
+     68           * @brief  MonitorTest Task Initialization.  This function is put into the
+     69           *         task table.
+     70           *
+     71           * @param   byte task_id - task ID of the MT Task
+     72           *
+     73           * @return  void
+     74           ***************************************************************************************************/
+     75          void MT_TaskInit(uint8 task_id)
+     76          {
+     77            /* Initialize the Serial port */
+     78            MT_UartInit();
+     79          
+     80            /* Register taskID - Do this after UartInit() because it will reset the taskID */
+     81            MT_UartRegisterTaskID(task_id);
+     82          
+     83            /* Initialize MT */
+     84            MT_Init(task_id);
+     85          }
+     86          
+     87          /***************************************************************************************************
+     88           * @fn      MT_ProcessEvent
+     89           *
+     90           * @brief MonitorTest Task Event Processor.  This task is put into the task table.
+     91           *
+     92           * @param   byte task_id - task ID of the MT Task
+     93           * @param   UINT16 events - event(s) for the MT Task
+     94           *
+     95           * @return  void
+     96           ***************************************************************************************************/
+     97          UINT16 MT_ProcessEvent(uint8 task_id, uint16 events)
+     98          {
+     99            uint8 *msg_ptr;
+    100            
+    101            (void)task_id;  // Intentionally unreferenced parameter
+    102          
+    103            /* Could be multiple events, so switch won't work */
+    104            if ( events & SYS_EVENT_MSG )
+    105            {
+    106              while ( (msg_ptr = osal_msg_receive( MT_TaskID )) )
+    107              {
+    108                MT_ProcessIncomingCommand((mtOSALSerialData_t *)msg_ptr);
+    109              }
+    110          
+    111              /* Return unproccessed events */
+    112              return (events ^ SYS_EVENT_MSG);
+    113            }
+    114          
+    115            if ( events & MT_ZTOOL_SERIAL_RCV_BUFFER_FULL )
+    116            {
+    117              /* Return unproccessed events */
+    118              return (events ^ MT_ZTOOL_SERIAL_RCV_BUFFER_FULL);
+    119            }
+    120          
+    121            /* Handle MT_SYS_OSAL_START_TIMER callbacks */
+    122          #if defined MT_SYS_FUNC
+    123            if ( events & (MT_SYS_OSAL_EVENT_MASK))
+    124            {
+    125              if (events & MT_SYS_OSAL_EVENT_0)
+    126              {
+    127                MT_SysOsalTimerExpired(0x00);
+    128                events ^= MT_SYS_OSAL_EVENT_0;
+    129              }
+    130          
+    131              if (events & MT_SYS_OSAL_EVENT_1)
+    132              {
+    133                MT_SysOsalTimerExpired(0x01);
+    134                events ^= MT_SYS_OSAL_EVENT_1;
+    135              }
+    136          
+    137              if (events & MT_SYS_OSAL_EVENT_2)
+    138              {
+    139                MT_SysOsalTimerExpired(0x02);
+    140                events ^= MT_SYS_OSAL_EVENT_2;
+    141              }
+    142          
+    143              if (events & MT_SYS_OSAL_EVENT_3)
+    144              {
+    145                MT_SysOsalTimerExpired(0x03);
+    146                events ^= MT_SYS_OSAL_EVENT_3;
+    147              }
+    148          
+    149              return events;
+    150            }
+    151          #endif
+    152          
+    153            /* Discard or make more handlers */
+    154            return 0;
+    155          
+    156          } /* MT_ProcessEvent() */
+    157          
+    158          /***************************************************************************************************
+    159           * @fn      MT_ProcessIncomingCommand
+    160           *
+    161           * @brief
+    162           *
+    163           *   Process Event Messages.
+    164           *
+    165           * @param   byte *msg - pointer to event message
+    166           *
+    167           * @return
+    168           ***************************************************************************************************/
+    169          void MT_ProcessIncomingCommand( mtOSALSerialData_t *msg )
+    170          {
+    171            byte deallocate;
+    172            byte *msg_ptr;
+    173            byte len;
+    174          
+    175            /* A little setup for AF, CB_FUNC and MT_SYS_APP_RSP_MSG */
+    176            msg_ptr = msg->msg;
+    177          
+    178            deallocate = true;
+    179          
+    180            /* Use the first byte of the message as the command ID */
+    181            switch ( msg->hdr.event )
+    182            {
+    183              case CMD_SERIAL_MSG:
+    184                MT_ProcessIncoming(msg->msg);
+    185                break;
+    186          
+    187              case CMD_DEBUG_MSG:
+    188                MT_ProcessDebugMsg( (mtDebugMsg_t *)msg );
+    189                break;
+    190          
+    191              case CB_FUNC:
+    192                /*
+    193                  Build SPI message here instead of redundantly calling MT_BuildSPIMsg
+    194                  because we have copied data already in the allocated message
+    195                */
+    196          
+    197                /* msg_ptr is the beginning of the intended SPI message */
+    198                len = SPI_0DATA_MSG_LEN + msg_ptr[DATALEN_FIELD];
+    199          
+    200                /*
+    201                  FCS goes to the last byte in the message and is calculated over all
+    202                  the bytes except FCS and SOP
+    203                */
+    204                msg_ptr[len-1] = MT_UartCalcFCS(msg_ptr + 1, (byte)(len-2));
+    205          
+    206          #ifdef MT_UART_DEFAULT_PORT
+    207                HalUARTWrite ( MT_UART_DEFAULT_PORT, msg_ptr, len );
+    208          #endif
+    209                break;
+    210          
+    211              case CMD_DEBUG_STR:
+    212                MT_ProcessDebugStr( (mtDebugStr_t *)msg );
+    213                break;
+    214          
+    215          #if !defined ( NONWK )
+    216              case MT_SYS_APP_RSP_MSG:
+    217                len = SPI_0DATA_MSG_LEN + msg_ptr[DATALEN_FIELD];
+    218                MTProcessAppRspMsg( msg_ptr, len );
+    219                break;
+    220          #endif  // NONWK
+    221          
+    222          #if defined (MT_UTIL_FUNC)
+    223          #if defined ZCL_KEY_ESTABLISH
+    224              case ZCL_KEY_ESTABLISH_IND:
+    225                MT_UtilKeyEstablishInd((keyEstablishmentInd_t *)msg);
+    226                break;
+    227          #endif        
+    228          #endif        
+    229          #ifdef MT_ZDO_CB_FUNC
+    230              case ZDO_STATE_CHANGE:
+    231                MT_ZdoStateChangeCB((osal_event_hdr_t *)msg);
+    232                break;
+    233          #endif
+    234          
+    235              default:
+    236                break;
+    237            }
+    238          
+    239            if ( deallocate )
+    240            {
+    241              osal_msg_deallocate( (uint8 *)msg );
+    242            }
+    243          }
+    244          
+    245          #ifdef MT_TASK
+    246          /***************************************************************************************************
+    247           * @fn      MT_TransportAlloc
+    248           *
+    249           * @brief   Allocate memory for transport msg
+    250           *
+    251           * @param   uint8 cmd0 - The first byte of the MT command id containing the command type and subsystem.
+    252           *          uint8 len - length
+    253           *
+    254           * @return  pointer the allocated memory or NULL if fail to allocate the memory
+    255           ***************************************************************************************************/
+    256          uint8 *MT_TransportAlloc(uint8 cmd0, uint8 len)
+    257          {
+    258            uint8 *p;
+    259          
+    260            (void)cmd0;  // Intentionally unreferenced parameter
+    261            
+    262            /* Allocate a buffer of data length + SOP+CMD+FCS (5bytes) */
+    263            p = osal_msg_allocate(len + SPI_0DATA_MSG_LEN);
+    264          
+    265            if (p)
+    266            {
+    267              p++; /* Save space for SOP_VALUE, msg structure */
+    268              return p;
+    269            }
+    270            else
+    271            {
+    272              return NULL;
+    273            }
+    274          }
+    275          
+    276          /***************************************************************************************************
+    277           * @fn      MT_TransportSend
+    278           *
+    279           * @brief   Fill in SOP and FCS then send out the msg
+    280           *
+    281           * @param   uint8 *pBuf - pointer to the message that contains CMD, length, data and FCS
+    282           *
+    283           * @return  None
+    284           ***************************************************************************************************/
+    285          void MT_TransportSend(uint8 *pBuf)
+    286          {
+    287            uint8 *msgPtr;
+    288            uint8 dataLen = pBuf[0]; /* Data length is on byte #1 from the pointer */
+    289          
+    290            /* Move back to the SOP */
+    291            msgPtr = pBuf-1;
+    292          
+    293            /* Insert SOP */
+    294            msgPtr[0] = MT_UART_SOF;
+    295          
+    296            /* Insert FCS */
+    297            msgPtr[SPI_0DATA_MSG_LEN - 1 + dataLen] = MT_UartCalcFCS (pBuf, (3 + dataLen));
+    298          
+    299            /* Send to UART */
+    300          #ifdef MT_UART_DEFAULT_PORT
+    301            HalUARTWrite(MT_UART_DEFAULT_PORT, msgPtr, dataLen + SPI_0DATA_MSG_LEN);
+    302          #endif
+    303          
+    304            /* Deallocate */
+    305            osal_msg_deallocate(msgPtr);
+    306          }
+    307          #endif /* MT_TASK */
+    308          /***************************************************************************************************
+    309           ***************************************************************************************************/
+
+Errors: 25
+Warnings: 2

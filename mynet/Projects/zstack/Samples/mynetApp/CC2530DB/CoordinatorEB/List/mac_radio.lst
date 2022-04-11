@@ -1,0 +1,855 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:31:01 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\mac\low_level\srf04\mac_radio.c                 #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\mac\low_level\srf04\mac_radio.c -D ZTOOL_P1 -D  #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\CoordinatorEB\List\ -lA                    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\ --diag_suppress Pe001,Pa010 -o                 #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\mac_radio.lst                                   #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\mac_radio.r51                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\mac\low_level\srf04\mac_radio.c
+      1          /**************************************************************************************************
+      2            Filename:       mac_radio.c
+      3            Revised:        $Date: 2007-09-11 10:58:41 -0700 (Tue, 11 Sep 2007) $
+      4            Revision:       $Revision: 15371 $
+      5          
+      6            Description:    Describe the purpose and contents of the file.
+      7          
+      8          
+      9            Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /* ------------------------------------------------------------------------------------------------
+     41           *                                          Includes
+     42           * ------------------------------------------------------------------------------------------------
+     43           */
+     44          
+     45          /* hal */
+     46          #include "hal_types.h"
+     47          
+     48          /* high-level */
+     49          #include "mac_pib.h"
+     50          
+     51          /* exported low-level */
+     52          #include "mac_low_level.h"
+     53          
+     54          /* low-level specific */
+     55          #include "mac_radio.h"
+     56          #include "mac_tx.h"
+     57          #include "mac_rx.h"
+     58          #include "mac_rx_onoff.h"
+     59          #include "mac_sleep.h"
+     60          #include "mac_backoff_timer.h"
+     61          
+     62          /* target specific */
+     63          #include "mac_radio_defs.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+
+  extern uint8 macChipVersion;
+                             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\mac_mcu.h",193  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+     64          
+     65          /* debug */
+     66          #include "mac_assert.h"
+     67          
+     68          
+     69          /* ------------------------------------------------------------------------------------------------
+     70           *                                          Includes
+     71           * ------------------------------------------------------------------------------------------------
+     72           */
+     73          #define ED_RF_POWER_MIN_DBM   (MAC_RADIO_RECEIVER_SENSITIVITY_DBM + MAC_SPEC_ED_MIN_DBM_ABOVE_RECEIVER_SENSITIVITY)
+     74          #define ED_RF_POWER_MAX_DBM   MAC_RADIO_RECEIVER_SATURATION_DBM
+     75          
+     76          
+     77          /* ------------------------------------------------------------------------------------------------
+     78           *                                        Global Variables
+     79           * ------------------------------------------------------------------------------------------------
+     80           */
+     81          uint8 macPhyTxPower;
+     82          uint8 macPhyChannel;
+     83          
+     84          
+     85          /* ------------------------------------------------------------------------------------------------
+     86           *                                        Local Variables
+     87           * ------------------------------------------------------------------------------------------------
+     88           */
+     89          static uint8 reqChannel;
+     90          static uint8 reqTxPower;
+     91          
+     92          
+     93          /* ------------------------------------------------------------------------------------------------
+     94           *                                        Local Functions
+     95           * ------------------------------------------------------------------------------------------------
+     96           */
+     97          static uint8 radioComputeED(int8 rssiDbm);
+     98          
+     99          
+    100          /**************************************************************************************************
+    101           * @fn          macRadioInit
+    102           *
+    103           * @brief       Initialize radio software.
+    104           *
+    105           * @param       none
+    106           *
+    107           * @return      none
+    108           **************************************************************************************************
+    109           */
+    110          MAC_INTERNAL_API void macRadioInit(void)
+    111          {
+    112            /* variable initialization for this module */
+    113            reqChannel    = MAC_RADIO_CHANNEL_DEFAULT;
+    114            macPhyChannel = MAC_RADIO_CHANNEL_DEFAULT;
+    115            reqTxPower    = MAC_RADIO_TX_POWER_DEFAULT;
+    116            macPhyTxPower = MAC_RADIO_TX_POWER_DEFAULT;
+    117          }
+    118          
+    119          
+    120          /**************************************************************************************************
+    121           * @fn          macRadioReset
+    122           *
+    123           * @brief       Resets the radio module.
+    124           *
+    125           * @param       none
+    126           *
+    127           * @return      none
+    128           **************************************************************************************************
+    129           */
+    130          MAC_INTERNAL_API void macRadioReset(void)
+    131          {
+    132            macRadioStopScan();
+    133            macRadioEnergyDetectStop();
+    134          }
+    135          
+    136          
+    137          /**************************************************************************************************
+    138           * @fn          macRadioRandomByte
+    139           *
+    140           * @brief       Return a random byte derived from previously set random seed.
+    141           *
+    142           * @param       none
+    143           *
+    144           * @return      a random byte
+    145           **************************************************************************************************
+    146           */
+    147          MAC_INTERNAL_API uint8 macRadioRandomByte(void)
+    148          {
+    149            return(MAC_RADIO_RANDOM_BYTE());
+    150          }
+    151          
+    152          
+    153          /**************************************************************************************************
+    154           * @fn          macRadioSetPanCoordinator
+    155           *
+    156           * @brief       Configure the pan coordinator status of the radio
+    157           *
+    158           * @param       panCoordFlag - non-zero to configure radio to be pan coordinator
+    159           *                             zero to configure radio as NON pan coordinator
+    160           *
+    161           * @return      none
+    162           **************************************************************************************************
+    163           */
+    164          MAC_INTERNAL_API void macRadioSetPanCoordinator(uint8 panCoordFlag)
+    165          {
+    166            /* abstracted radio configuration */
+    167            MAC_RADIO_SET_PAN_COORDINATOR(panCoordFlag);
+    168          }
+    169          
+    170          
+    171          /**************************************************************************************************
+    172           * @fn          macRadioSetPanID
+    173           *
+    174           * @brief       Set the pan ID on the radio.
+    175           *
+    176           * @param       panID - 16 bit PAN identifier
+    177           *
+    178           * @return      none
+    179           **************************************************************************************************
+    180           */
+    181          void macRadioSetPanID(uint16 panID)
+    182          {
+    183            /* abstracted radio configuration */
+    184            MAC_RADIO_SET_PAN_ID(panID);
+    185          }
+    186          
+    187          
+    188          /**************************************************************************************************
+    189           * @fn          macRadioSetShortAddr
+    190           *
+    191           * @brief       Set the short addrss on the radio.
+    192           *
+    193           * @param       shortAddr - 16 bit short address
+    194           *
+    195           * @return      none
+    196           **************************************************************************************************
+    197           */
+    198          MAC_INTERNAL_API void macRadioSetShortAddr(uint16 shortAddr)
+    199          {
+    200            /* abstracted radio configuration */
+    201            MAC_RADIO_SET_SHORT_ADDR(shortAddr);
+    202          }
+    203          
+    204          
+    205          /**************************************************************************************************
+    206           * @fn          macRadioSetIEEEAddr
+    207           *
+    208           * @brief       Set the IEEE address on the radio.
+    209           *
+    210           * @param       pIEEEAddr - pointer to array holding 64 bit IEEE address; array must be little
+    211           *                          endian format (starts with lowest signficant byte)
+    212           *
+    213           * @return      none
+    214           **************************************************************************************************
+    215           */
+    216          MAC_INTERNAL_API void macRadioSetIEEEAddr(uint8 * pIEEEAddr)
+    217          {
+    218            /* abstracted radio configuration */
+    219            MAC_RADIO_SET_IEEE_ADDR(pIEEEAddr);
+    220          }
+    221          
+    222          
+    223          /**************************************************************************************************
+    224           * @fn          macRadioSetTxPower
+    225           *
+    226           * @brief       Set transmitter power of the radio.
+    227           *
+    228           * @param       txPower - the minus dBm for power but as a postive integer (or if configured
+    229           *                        for it, txPower is the raw register value). If PA/LNA is installed
+    230           *                        then txPower becomes positive dBm.
+    231           *
+    232           * @return      none
+    233           **************************************************************************************************
+    234           */
+    235          #ifndef HAL_MAC_USE_REGISTER_POWER_VALUES
+    236          /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    237          
+    238          MAC_INTERNAL_API void macRadioSetTxPower(uint8 txPower)
+    239          {
+    240            halIntState_t  s;
+    241          #if defined MAC_RUNTIME_CC2591 || defined MAC_RUNTIME_CC2590
+    242            const uint8 CODE *pTable = macRadioDefsTxPwrTables[macRadioDefsRefTableId >> 4];
+    243          #elif defined HAL_PA_LNA || defined HAL_PA_LNA_CC2590
+    244            const uint8 CODE *pTable = macRadioDefsTxPwrTables[0];
+    245          #else
+    246            const uint8 CODE *pTable = macRadioDefsTxPwrBare;
+    247          #endif
+    248          
+    249            /* if the selected dBm is out of range, use the closest available */
+    250            if ((int8)txPower > (int8)pTable[MAC_RADIO_DEFS_TBL_TXPWR_FIRST_ENTRY])
+    251            {
+    252              /* greater than base value -- out of table range */
+    253              txPower = pTable[MAC_RADIO_DEFS_TBL_TXPWR_FIRST_ENTRY];
+    254            }
+    255            else if ((int8)txPower < (int8)pTable[MAC_RADIO_DEFS_TBL_TXPWR_LAST_ENTRY])
+    256            {
+    257              /* smaller than the lowest power level -- out of table range */
+    258              txPower = pTable[MAC_RADIO_DEFS_TBL_TXPWR_LAST_ENTRY];
+    259            }
+    260          
+    261            /*
+    262             *  Set the global variable reqTxPower.  This variable is referenced
+    263             *  by the function macRadioUpdateTxPower() to write the radio register.
+    264             *
+    265             *  A lookup table is used to translate the power level to the register
+    266             *  value.
+    267             */
+    268            HAL_ENTER_CRITICAL_SECTION(s);
+    269            /* When calculating index to the power register value table,
+    270             * either txPower (of uint8 type) has to be explicitly type-casted to int8
+    271             * or the subtraction expression has to be type-casted to uint8 to work
+    272             * with the integral promotions.
+    273             * The latter is more code size efficient and hence the latter is used.
+    274             */
+    275            {
+    276              uint8 index = pTable[MAC_RADIO_DEFS_TBL_TXPWR_FIRST_ENTRY] - txPower
+    277                + MAC_RADIO_DEFS_TBL_TXPWR_ENTRIES;
+    278              reqTxPower = pTable[index];
+    279            }
+    280            HAL_EXIT_CRITICAL_SECTION(s);
+    281          
+    282            /* update the radio power setting */
+    283            macRadioUpdateTxPower();
+    284          }
+    285          
+    286          #else
+    287          /* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - */
+    288          
+    289          MAC_INTERNAL_API void macRadioSetTxPower(uint8 txPower)
+    290          {
+    291            halIntState_t  s;
+    292          
+    293            /* same as above but with no lookup table, use raw register value */
+    294            HAL_ENTER_CRITICAL_SECTION(s);
+    295            reqTxPower = txPower;
+    296            HAL_EXIT_CRITICAL_SECTION(s);
+    297          
+    298            /* update the radio power setting */
+    299            macRadioUpdateTxPower();
+    300          }
+    301          
+    302          #endif
+    303          
+    304          
+    305          /**************************************************************************************************
+    306           * @fn          macRadioUpdateTxPower
+    307           *
+    308           * @brief       Update the radio's transmit power if a new power level has been requested
+    309           *
+    310           * @param       reqTxPower - file scope variable that holds the last request power level
+    311           *              macPhyTxPower - global variable that holds radio's set power level
+    312           *
+    313           * @return      none
+    314           **************************************************************************************************
+    315           */
+    316          MAC_INTERNAL_API void macRadioUpdateTxPower(void)
+    317          {
+    318            halIntState_t  s;
+    319          
+    320            /*
+    321             *  If the requested power setting is different from the actual radio setting,
+    322             *  attempt to udpate to the new power setting.
+    323             */
+    324            HAL_ENTER_CRITICAL_SECTION(s);
+    325            if (reqTxPower != macPhyTxPower)
+    326            {
+    327              /*
+    328               *  Radio power cannot be updated when the radio is physically transmitting.
+    329               *  If there is a possibility radio is transmitting, do not change the power
+    330               *  setting.  This function will be called again after the current transmit
+    331               *  completes.
+    332               */
+    333              if (!macRxOutgoingAckFlag && !MAC_TX_IS_PHYSICALLY_ACTIVE())
+    334              {
+    335                /*
+    336                 *  Set new power level;  update the shadow value and write
+    337                 *  the new value to the radio hardware.
+    338                 */
+    339                macPhyTxPower = reqTxPower;
+    340                MAC_RADIO_SET_TX_POWER(macPhyTxPower);
+    341              }
+    342            }
+    343            HAL_EXIT_CRITICAL_SECTION(s);
+    344          }
+    345          
+    346          
+    347          /**************************************************************************************************
+    348           * @fn          macRadioSetChannel
+    349           *
+    350           * @brief       Set radio channel.
+    351           *
+    352           * @param       channel - channel number, valid range is 11 through 26
+    353           *
+    354           * @return      none
+    355           **************************************************************************************************
+    356           */
+    357          MAC_INTERNAL_API void macRadioSetChannel(uint8 channel)
+    358          {
+    359            halIntState_t  s;
+    360          
+    361            MAC_ASSERT((channel >= 11) && (channel <= 28));  /* illegal channel */
+    362          
+    363            /* critical section to make sure transmit does not start while updating channel */
+    364            HAL_ENTER_CRITICAL_SECTION(s);
+    365          
+    366            /* set requested channel */
+    367            reqChannel = channel;
+    368          
+    369            /*
+    370             *  If transmit is not active, update the radio hardware immediately.  If transmit is active,
+    371             *  the channel will be updated at the end of the current transmit.
+    372             */
+    373            if (!macTxActive)
+    374            {
+    375              macRadioUpdateChannel();
+    376            }
+    377          
+    378            HAL_EXIT_CRITICAL_SECTION(s);
+    379          }
+    380          
+    381          
+    382          /**************************************************************************************************
+    383           * @fn          macRadioUpdateChannel
+    384           *
+    385           * @brief       Update the radio channel if a new channel has been requested.
+    386           *
+    387           * @param       none
+    388           *
+    389           * @return      none
+    390           **************************************************************************************************
+    391           */
+    392          MAC_INTERNAL_API void macRadioUpdateChannel(void)
+    393          {
+    394            halIntState_t  s;
+    395          
+    396            MAC_ASSERT(!macTxActive); /* cannot change channel during a transmit */
+    397          
+    398            /* if the channel has changed, set the radio to the new channel */
+    399            HAL_ENTER_CRITICAL_SECTION(s);
+    400            if (reqChannel != macPhyChannel)
+    401            {
+    402              macPhyChannel = reqChannel;
+    403              HAL_EXIT_CRITICAL_SECTION(s);
+    404          
+    405              /* changing the channel stops any receive in progress */
+    406              macRxOff();
+    407              MAC_RADIO_SET_CHANNEL(macPhyChannel);
+    408          
+    409              /* If the channel is updated in the middle of receiving a frame, we must
+    410               * clean up the Rx logic.
+    411               */
+    412              macRxHaltCleanup();
+    413          
+    414              macRxOnRequest();
+    415            }
+    416            else
+    417            {
+    418              HAL_EXIT_CRITICAL_SECTION(s);
+    419            }
+    420          }
+    421          
+    422          
+    423          /**************************************************************************************************
+    424           * @fn          macRadioStartScan
+    425           *
+    426           * @brief       Puts radio into selected scan mode.
+    427           *
+    428           * @param       scanMode - scan mode, see #defines in .h file
+    429           *
+    430           * @return      none
+    431           **************************************************************************************************
+    432           */
+    433          MAC_INTERNAL_API void macRadioStartScan(uint8 scanMode)
+    434          {
+    435            MAC_ASSERT(macSleepState == MAC_SLEEP_STATE_AWAKE); /* radio must be awake */
+    436            MAC_ASSERT(macRxFilter == RX_FILTER_OFF); /* all filtering must be off to start scan */
+    437          
+    438            /* set the receive filter based on the selected scan mode */
+    439            if (scanMode == MAC_SCAN_ED)
+    440            {
+    441              macRxFilter = RX_FILTER_ALL;
+    442            }
+    443            else if (scanMode == MAC_SCAN_ORPHAN)
+    444            {
+    445              macRxFilter = RX_FILTER_NON_COMMAND_FRAMES;
+    446            }
+    447            else
+    448            {
+    449              MAC_ASSERT((scanMode == MAC_SCAN_ACTIVE) || (scanMode == MAC_SCAN_PASSIVE)); /* invalid scan type */
+    450              macRxFilter = RX_FILTER_NON_BEACON_FRAMES;
+    451          
+    452              /* for active and passive scans, per spec the pan ID must be 0xFFFF */
+    453              MAC_RADIO_SET_PAN_ID(0xFFFF);
+    454            }
+    455          }
+    456          
+    457          
+    458          /**************************************************************************************************
+    459           * @fn          macRadioStopScan
+    460           *
+    461           * @brief       Takes radio out of scan mode.  Note can be called if
+    462           *
+    463           * @param       none
+    464           *
+    465           * @return      none
+    466           **************************************************************************************************
+    467           */
+    468          MAC_INTERNAL_API void macRadioStopScan(void)
+    469          {
+    470            macRxFilter = RX_FILTER_OFF;
+    471          
+    472            /* restore the pan ID (passive and active scans set pan ID to 0xFFFF) */
+    473            MAC_RADIO_SET_PAN_ID(macPib.panId);
+    474          }
+    475          
+    476          
+    477          /**************************************************************************************************
+    478           * @fn          macRadioEnergyDetectStart
+    479           *
+    480           * @brief       Initiates energy detect.  The highest energy detected is recorded from the time
+    481           *              when this function is called until the energy detect is stopped.
+    482           *
+    483           * @param       none
+    484           *
+    485           * @return      none
+    486           **************************************************************************************************
+    487           */
+    488          void macRadioEnergyDetectStart(void)
+    489          {
+    490            MAC_RADIO_RECORD_MAX_RSSI_START();
+    491          }
+    492          
+    493          
+    494          /**************************************************************************************************
+    495           * @fn          macRadioEnergyDetectStop
+    496           *
+    497           * @brief       Called at completion of an energy detect.  Note: can be called even if energy
+    498           *              detect is already stopped (needed by reset).
+    499           *
+    500           * @param       none
+    501           *
+    502           * @return      highest energy detect measurement
+    503           **************************************************************************************************
+    504           */
+    505          uint8 macRadioEnergyDetectStop(void)
+    506          {
+    507            uint8 rssiDbm;
+    508            uint8 energyDetectMeasurement;
+    509          
+    510            rssiDbm = MAC_RADIO_RECORD_MAX_RSSI_STOP() + MAC_RADIO_RSSI_OFFSET;
+    511            MAC_RADIO_RSSI_LNA_OFFSET(rssiDbm);
+    512            energyDetectMeasurement = radioComputeED(rssiDbm);
+    513          
+    514            return(energyDetectMeasurement);
+    515          }
+    516          
+    517          /*=================================================================================================
+    518           * @fn          radioComputeED
+    519           *
+    520           * @brief       Compute energy detect measurement.
+    521           *
+    522           * @param       rssi - raw RSSI value from radio hardware
+    523           *
+    524           * @return      energy detect measurement in the range of 0x00-0xFF
+    525           *=================================================================================================
+    526           */
+    527          static uint8 radioComputeED(int8 rssiDbm)
+    528          {
+    529            uint8 ed;
+    530          
+    531            /*
+    532             *  Keep RF power between minimum and maximum values.
+    533             *  This min/max range is derived from datasheet and specification.
+    534             */
+    535            if (rssiDbm < ED_RF_POWER_MIN_DBM)
+    536            {
+    537              rssiDbm = ED_RF_POWER_MIN_DBM;
+    538            }
+    539            else if (rssiDbm > ED_RF_POWER_MAX_DBM)
+    540            {
+    541              rssiDbm = ED_RF_POWER_MAX_DBM;
+    542            }
+    543          
+    544            /*
+    545             *  Create energy detect measurement by normalizing and scaling RF power level.
+    546             *
+    547             *  Note : The division operation below is designed for maximum accuracy and
+    548             *         best granularity.  This is done by grouping the math operations to
+    549             *         compute the entire numerator before doing any division.
+    550             */
+    551            ed = (MAC_SPEC_ED_MAX * (rssiDbm - ED_RF_POWER_MIN_DBM)) / (ED_RF_POWER_MAX_DBM - ED_RF_POWER_MIN_DBM);
+    552          
+    553            return(ed);
+    554          }
+    555          
+    556          
+    557          /**************************************************************************************************
+    558           * @fn          macRadioComputeLQI
+    559           *
+    560           * @brief       Compute link quality indication.
+    561           *
+    562           * @param       rssi - raw RSSI value from radio hardware
+    563           *              corr - correlation value from radio hardware
+    564           *
+    565           * @return      link quality indicator value
+    566           **************************************************************************************************
+    567           */
+    568          MAC_INTERNAL_API uint8 macRadioComputeLQI(int8 rssiDbm, uint8 corr)
+    569          {
+    570            (void) corr; /* suppress compiler warning of unused parameter */
+    571          
+    572            /*
+    573             *  Note : Currently the LQI value is simply the energy detect measurement.
+    574             *         A more accurate value could be derived by using the correlation
+    575             *         value along with the RSSI value.
+    576             */
+    577            return(radioComputeED(rssiDbm));
+    578          }
+    579          
+    580          
+    581          /**************************************************************************************************
+    582          */
+
+Errors: 24
+Warnings: 2

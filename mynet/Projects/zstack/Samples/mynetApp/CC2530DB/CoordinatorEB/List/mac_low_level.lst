@@ -1,0 +1,428 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:31:01 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\mac\low_level\srf04\mac_low_level.c             #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\mac\low_level\srf04\mac_low_level.c -D          #
+#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
+#                          -D LCD_SUPPORTED=DEBUG -lC                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\ -lA C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\ #
+#                          Projects\zstack\Samples\mynetApp\CC2530DB\Coordina #
+#                          torEB\List\ --diag_suppress Pe001,Pa010 -o         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\mac_low_level.lst                               #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\mac_low_level.r51                                #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\mac\low_level\srf04\mac_low_level.c
+      1          /**************************************************************************************************
+      2            Filename:       mac_low_level.c
+      3            Revised:        $Date: 2007-09-11 10:58:41 -0700 (Tue, 11 Sep 2007) $
+      4            Revision:       $Revision: 15371 $
+      5          
+      6            Description:    Describe the purpose and contents of the file.
+      7          
+      8          
+      9            Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /* ------------------------------------------------------------------------------------------------
+     41           *                                          Includes
+     42           * ------------------------------------------------------------------------------------------------
+     43           */
+     44          
+     45          /* hal */
+     46          #include "hal_types.h"
+     47          #include "hal_mcu.h"
+     48          
+     49          /* exported low-level */
+     50          #include "mac_low_level.h"
+     51          
+     52          /* low-level specific */
+     53          #include "mac_radio.h"
+     54          #include "mac_rx.h"
+     55          #include "mac_tx.h"
+     56          #include "mac_rx_onoff.h"
+     57          #include "mac_backoff_timer.h"
+     58          #include "mac_sleep.h"
+     59          
+     60          /* target specific */
+     61          #include "mac_radio_defs.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+
+  extern uint8 macChipVersion;
+                             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\mac_mcu.h",193  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+     62          
+     63          /* debug */
+     64          #include "mac_assert.h"
+     65          
+     66          #if !defined ( HAL_CLOCK_CRYSTAL )
+     67          /* DCO has a frequency error of 2% */
+     68          const uint16 CODE macBeaconMarginDCO[] =
+     69          {
+     70            3,
+     71            3,
+     72            4,
+     73            8,
+     74            16,
+     75            31,
+     76            62,
+     77            123,
+     78            246,
+     79            492,
+     80            983,
+     81            1967,
+     82            3933,
+     83            7865,
+     84            15729,
+     85            0
+     86          };
+     87          #endif
+     88          
+     89          /**************************************************************************************************
+     90           * @fn          macLowLevelInit
+     91           *
+     92           * @brief       Initialize low-level MAC.  Called only once on system power-up.
+     93           *
+     94           * @param       none
+     95           *
+     96           * @return      none
+     97           **************************************************************************************************
+     98           */
+     99          MAC_INTERNAL_API void macLowLevelInit(void)
+    100          {
+    101            /* initialize mcu before anything else */
+    102            MAC_RADIO_MCU_INIT();
+    103          
+    104            /* initialize (override) beacon margin timing table */
+    105          #if !defined ( HAL_CLOCK_CRYSTAL )
+    106            {
+    107              uint8 i;
+    108          
+    109              for (i = 0; i < sizeof(macBeaconMarginDCO)/sizeof(macBeaconMarginDCO[0]); i++)
+    110              {
+    111                macBeaconMargin[i] = macBeaconMarginDCO[i];
+    112              }
+    113            }
+    114          #endif
+    115          
+    116            /* software initialziation */
+    117            macRadioInit();
+    118            macRxOnOffInit();
+    119            macRxInit();
+    120            macTxInit();
+    121            macBackoffTimerInit();
+    122          }
+    123          
+    124          
+    125          /**************************************************************************************************
+    126           * @fn          macLowLevelReset
+    127           *
+    128           * @brief       Reset low-level MAC.
+    129           *
+    130           * @param       none
+    131           *
+    132           * @return      none
+    133           **************************************************************************************************
+    134           */
+    135          MAC_INTERNAL_API void macLowLevelReset(void)
+    136          {
+    137            MAC_ASSERT(!HAL_INTERRUPTS_ARE_ENABLED());   /* interrupts must be disabled */
+    138          
+    139            /* reset radio modules;  if not awake, skip this */
+    140            if (macSleepState == MAC_SLEEP_STATE_AWAKE)
+    141            {
+    142              macRxTxReset();
+    143              macRadioReset();
+    144            }
+    145          
+    146            /* reset timer */
+    147            macBackoffTimerReset();
+    148          
+    149            /* power up the radio */
+    150            macSleepWakeUp();
+    151          }
+    152          
+    153          
+    154          /**************************************************************************************************
+    155          */
+
+Errors: 24
+Warnings: 2

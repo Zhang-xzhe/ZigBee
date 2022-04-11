@@ -1,0 +1,708 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:31:02 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\ZMain\TI2530DB\OnBoard.c                   #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\ZMain\TI2530DB\OnBoard.c -D ZTOOL_P1 -D    #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\CoordinatorEB\List\ -lA                    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\ --diag_suppress Pe001,Pa010 -o                 #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\OnBoard.lst                                     #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\OnBoard.r51                                      #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects\zstack\ZMain\TI2530DB\OnBoard.c
+      1          /**************************************************************************************************
+      2            Filename:       OnBoard.c
+      3            Revised:        $Date: 2009-12-16 17:44:49 -0800 (Wed, 16 Dec 2009) $
+      4            Revision:       $Revision: 21351 $
+      5          
+      6            Description:    This file contains the UI and control for the
+      7                            peripherals on the EVAL development board
+      8            Notes:          This file targets the Chipcon CC2530
+      9          
+     10          
+     11            Copyright 2005-2009 Texas Instruments Incorporated. All rights reserved.
+     12          
+     13            IMPORTANT: Your use of this Software is limited to those specific rights
+     14            granted under the terms of a software license agreement between the user
+     15            who downloaded the software, his/her employer (which must be your employer)
+     16            and Texas Instruments Incorporated (the "License").  You may not use this
+     17            Software unless you agree to abide by the terms of the License. The License
+     18            limits your use, and you acknowledge, that the Software may not be modified,
+     19            copied or distributed unless embedded on a Texas Instruments microcontroller
+     20            or used solely and exclusively in conjunction with a Texas Instruments radio
+     21            frequency transceiver, which is integrated into your product.  Other than for
+     22            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     23            works of, modify, distribute, perform, display or sell this Software and/or
+     24            its documentation for any purpose.
+     25          
+     26            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     27            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     28            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     29            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     30            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     31            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     32            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     33            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     34            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     35            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     36            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     37          
+     38            Should you have any questions regarding your right to use this Software,
+     39            contact Texas Instruments Incorporated at www.TI.com.
+     40          **************************************************************************************************/
+     41          
+     42          /*********************************************************************
+     43           * INCLUDES
+     44           */
+     45          
+     46          #include "ZComDef.h"
+     47          #include "OnBoard.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+
+  typedef void (*halUARTCBack_t) (uint8 port, uint8 event);
+                                                          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",119  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    halUARTCBack_t      callBackFunc;
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",141  Error[Pe020]: 
+          identifier "halUARTCBack_t" is undefined
+     48          #include "OSAL.h"
+     49          #include "MT.h"
+     50          #include "MT_SYS.h"
+     51          #include "DebugTrace.h"
+     52          
+     53          /* Hal */
+     54          #include "hal_lcd.h"
+     55          #include "hal_mcu.h"
+     56          #include "hal_timer.h"
+     57          #include "hal_key.h"
+     58          #include "hal_led.h"
+     59          
+     60          /* Allow access macRandomByte() */
+     61          #include "mac_radio_defs.h"
+     62          
+     63          /*********************************************************************
+     64           * MACROS
+     65           */
+     66          
+     67          /*********************************************************************
+     68           * CONSTANTS
+     69           */
+     70          
+     71          // Task ID not initialized
+     72          #define NO_TASK_ID 0xFF
+     73          
+     74          // Minimum length RAM "pattern" for Stack check
+     75          #define MIN_RAM_INIT 12
+     76          
+     77          /*********************************************************************
+     78           * TYPEDEFS
+     79           */
+     80          
+     81          /*********************************************************************
+     82           * GLOBAL VARIABLES
+     83           */
+     84          
+     85          uint8 OnboardKeyIntEnable;
+     86          
+     87          #if defined MAKE_CRC_SHDW
+     88          #pragma location="CRC_SHDW"
+     89          const CODE uint16 _crcShdw = 0xFFFF;
+     90          #pragma required=_crcShdw
+     91          #endif
+     92          
+     93          // 64-bit Extended Address of this device
+     94          uint8 aExtendedAddress[8];
+     95          
+     96          /*********************************************************************
+     97           * EXTERNAL VARIABLES
+     98           */
+     99          
+    100          /*********************************************************************
+    101           * EXTERNAL FUNCTIONS
+    102           */
+    103          
+    104          /*********************************************************************
+    105           * LOCAL VARIABLES
+    106           */
+    107          
+    108          // Registered keys task ID, initialized to NOT USED.
+    109          static uint8 registeredKeysTaskID = NO_TASK_ID;
+    110          
+    111          /*********************************************************************
+    112           * LOCAL FUNCTIONS
+    113           */
+    114          
+    115          static void ChkReset( void );
+    116          
+    117          /*********************************************************************
+    118           * @fn      InitBoard()
+    119           * @brief   Initialize the CC2420DB Board Peripherals
+    120           * @param   level: COLD,WARM,READY
+    121           * @return  None
+    122           */
+    123          void InitBoard( uint8 level )
+    124          {
+    125            if ( level == OB_COLD )
+    126            {
+    127              // Interrupts off
+    128              osal_int_disable( INTS_ALL );
+    129              // Turn all LEDs off
+    130              HalLedSet( HAL_LED_ALL, HAL_LED_MODE_OFF );
+    131              // Check for Brown-Out reset
+    132              ChkReset();
+    133            }
+    134            else  // !OB_COLD
+    135            {
+    136              /* Initialize Key stuff */
+    137              OnboardKeyIntEnable = HAL_KEY_INTERRUPT_DISABLE;
+    138              HalKeyConfig( OnboardKeyIntEnable, OnBoard_KeyCallback);
+    139            }
+    140          }
+    141          
+    142          /*********************************************************************
+    143           * @fn      ChkReset()
+    144           * @brief   Check reset bits - if reset cause is unknown, assume a
+    145           *          brown-out (low power), assume batteries are not reliable,
+    146           *          hang in a loop and sequence through the LEDs.
+    147           * @param   None
+    148           * @return  None
+    149           *********************************************************************/
+    150          void ChkReset( void )
+    151          {
+    152            uint8 led;
+    153            uint8 rib;
+    154          
+    155            // Isolate reset indicator bits
+    156            rib = SLEEPSTA & LRESET;
+    157          
+    158            if ( rib == RESETPO )
+    159            {
+    160              // Put code here to handle Power-On reset
+    161            }
+    162            else if ( rib == RESETEX )
+    163            {
+    164              // Put code here to handle External reset
+    165            }
+    166            else if ( rib == RESETWD )
+    167            {
+    168              // Put code here to handle WatchDog reset
+    169            }
+    170            else
+    171            {
+    172              // Unknown, hang and blink
+    173              HAL_DISABLE_INTERRUPTS();
+    174              led = HAL_LED_4;
+    175              while ( 1 ) {
+    176                HalLedSet( led, HAL_LED_MODE_ON );
+    177                MicroWait( 62500 );
+    178                MicroWait( 62500 );
+    179                HalLedSet( led, HAL_LED_MODE_OFF );
+    180                MicroWait( 37500 );
+    181                MicroWait( 37500 );
+    182                if ( !(led >>= 1) )
+    183                  led = HAL_LED_4;
+    184              }
+    185            }
+    186          }
+    187          
+    188          /*********************************************************************
+    189           *                        "Keyboard" Support
+    190           *********************************************************************/
+    191          
+    192          /*********************************************************************
+    193           * Keyboard Register function
+    194           *
+    195           * The keyboard handler is setup to send all keyboard changes to
+    196           * one task (if a task is registered).
+    197           *
+    198           * If a task registers, it will get all the keys. You can change this
+    199           * to register for individual keys.
+    200           *********************************************************************/
+    201          uint8 RegisterForKeys( uint8 task_id )
+    202          {
+    203            // Allow only the first task
+    204            if ( registeredKeysTaskID == NO_TASK_ID )
+    205            {
+    206              registeredKeysTaskID = task_id;
+    207              return ( true );
+    208            }
+    209            else
+    210              return ( false );
+    211          }
+    212          
+    213          /*********************************************************************
+    214           * @fn      OnBoard_SendKeys
+    215           *
+    216           * @brief   Send "Key Pressed" message to application.
+    217           *
+    218           * @param   keys  - keys that were pressed
+    219           *          state - shifted
+    220           *
+    221           * @return  status
+    222           *********************************************************************/
+    223          uint8 OnBoard_SendKeys( uint8 keys, uint8 state )
+    224          {
+    225            keyChange_t *msgPtr;
+    226          
+    227            if ( registeredKeysTaskID != NO_TASK_ID )
+    228            {
+    229              // Send the address to the task
+    230              msgPtr = (keyChange_t *)osal_msg_allocate( sizeof(keyChange_t) );
+    231              if ( msgPtr )
+    232              {
+    233                msgPtr->hdr.event = KEY_CHANGE;
+    234                msgPtr->state = state;
+    235                msgPtr->keys = keys;
+    236          
+    237                osal_msg_send( registeredKeysTaskID, (uint8 *)msgPtr );
+    238              }
+    239              return ( ZSuccess );
+    240            }
+    241            else
+    242              return ( ZFailure );
+    243          }
+    244          
+    245          /*********************************************************************
+    246           * @fn      OnBoard_KeyCallback
+    247           *
+    248           * @brief   Callback service for keys
+    249           *
+    250           * @param   keys  - keys that were pressed
+    251           *          state - shifted
+    252           *
+    253           * @return  void
+    254           *********************************************************************/
+    255          void OnBoard_KeyCallback ( uint8 keys, uint8 state )
+    256          {
+    257            uint8 shift;
+    258            (void)state;
+    259          
+    260            /* Get shift key status */
+    261            shift = ((keys & HAL_KEY_SW_6) ? true : false);
+    262          
+    263            if ( OnBoard_SendKeys( keys, shift ) != ZSuccess )
+    264            {
+    265              // Process SW1 here
+    266              if ( keys & HAL_KEY_SW_1 )  // Switch 1
+    267              {
+    268              }
+    269              // Process SW2 here
+    270              if ( keys & HAL_KEY_SW_2 )  // Switch 2
+    271              {
+    272              }
+    273              // Process SW3 here
+    274              if ( keys & HAL_KEY_SW_3 )  // Switch 3
+    275              {
+    276              }
+    277              // Process SW4 here
+    278              if ( keys & HAL_KEY_SW_4 )  // Switch 4
+    279              {
+    280              }
+    281              // Process SW5 here
+    282              if ( keys & HAL_KEY_SW_5 )  // Switch 5
+    283              {
+    284              }
+    285              // Process SW6 here
+    286              if ( keys & HAL_KEY_SW_6 )  // Switch 6
+    287              {
+    288              }
+    289            }
+    290          }
+    291          
+    292          /*********************************************************************
+    293           * @fn      OnBoard_stack_used
+    294           *
+    295           * @brief   Runs through the stack looking for touched memory.
+    296           *
+    297           * @param   none
+    298           *
+    299           * @return  Maximum number of bytes used by the stack.
+    300           *********************************************************************/
+    301          uint16 OnBoard_stack_used(void)
+    302          {
+    303            uint8 const *ptr;
+    304            uint8 cnt = 0;
+    305          
+    306            for (ptr = XSTACK_END; ptr > XSTACK_BEG; ptr--)
+    307            {
+    308              if (STACK_INIT_VALUE == *ptr)
+    309              {
+    310                if (++cnt >= MIN_RAM_INIT)
+    311                {
+    312                  ptr += MIN_RAM_INIT;
+    313                  break;
+    314                }
+    315              }
+    316              else
+    317              {
+    318                cnt = 0;
+    319              }
+    320            }
+    321          
+    322            return (uint16)(XSTACK_END - ptr + 1);
+    323          }
+    324          
+    325          /*********************************************************************
+    326           * @fn      _itoa
+    327           *
+    328           * @brief   convert a 16bit number to ASCII
+    329           *
+    330           * @param   num -
+    331           *          buf -
+    332           *          radix -
+    333           *
+    334           * @return  void
+    335           *
+    336           *********************************************************************/
+    337          void _itoa(uint16 num, uint8 *buf, uint8 radix)
+    338          {
+    339            char c,i;
+    340            uint8 *p, rst[5];
+    341          
+    342            p = rst;
+    343            for ( i=0; i<5; i++,p++ )
+    344            {
+    345              c = num % radix;  // Isolate a digit
+    346              *p = c + (( c < 10 ) ? '0' : '7');  // Convert to Ascii
+    347              num /= radix;
+    348              if ( !num )
+    349                break;
+    350            }
+    351          
+    352            for ( c=0 ; c<=i; c++ )
+    353              *buf++ = *p--;  // Reverse character order
+    354          
+    355            *buf = '\0';
+    356          }
+    357          
+    358          /*********************************************************************
+    359           * @fn        Onboard_rand
+    360           *
+    361           * @brief    Random number generator
+    362           *
+    363           * @param   none
+    364           *
+    365           * @return  uint16 - new random number
+    366           *
+    367           *********************************************************************/
+    368          uint16 Onboard_rand( void )
+    369          {
+    370            return ( MAC_RADIO_RANDOM_WORD() );
+    371          }
+    372          
+    373          /*********************************************************************
+    374           * @fn        Onboard_wait
+    375           *
+    376           * @brief    Delay wait
+    377           *
+    378           * @param   uint16 - time to wait
+    379           *
+    380           * @return  none
+    381           *
+    382           *********************************************************************/
+    383          void Onboard_wait( uint16 timeout )
+    384          {
+    385            while (timeout--)
+    386            {
+    387              asm("NOP");
+    388              asm("NOP");
+    389              asm("NOP");
+    390            }
+    391          }
+    392          
+    393          /*********************************************************************
+    394           *                    EXTERNAL I/O FUNCTIONS
+    395           *
+    396           * User defined functions to control external devices. Add your code
+    397           * to the following functions to control devices wired to DB outputs.
+    398           *
+    399           *********************************************************************/
+    400          
+    401          void BigLight_On( void )
+    402          {
+    403            // Put code here to turn on an external light
+    404          }
+    405          
+    406          void BigLight_Off( void )
+    407          {
+    408            // Put code here to turn off an external light
+    409          }
+    410          
+    411          void BuzzerControl( uint8 on )
+    412          {
+    413            // Put code here to turn a buzzer on/off
+    414            (void)on;
+    415          }
+    416          
+    417          void Dimmer( uint8 lvl )
+    418          {
+    419            // Put code here to control a dimmer
+    420            (void)lvl;
+    421          }
+    422          
+    423          // No dip switches on this board
+    424          uint8 GetUserDipSw( void )
+    425          {
+    426            return 0;
+    427          }
+    428          
+    429          /*********************************************************************
+    430          *********************************************************************/
+
+Errors: 25
+Warnings: 2

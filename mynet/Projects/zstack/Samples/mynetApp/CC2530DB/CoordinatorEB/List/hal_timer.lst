@@ -1,0 +1,1123 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:31:05 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\hal\target\CC2530EB\hal_timer.c                 #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\hal\target\CC2530EB\hal_timer.c -D ZTOOL_P1 -D  #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\CoordinatorEB\List\ -lA                    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\ --diag_suppress Pe001,Pa010 -o                 #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\hal_timer.lst                                   #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\hal_timer.r51                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_timer.c
+      1          /**************************************************************************************************
+      2            Filename:       hal_timer.c
+      3            Revised:        $Date: 2009-03-12 16:25:22 -0700 (Thu, 12 Mar 2009) $
+      4            Revision:       $Revision: 19404 $
+      5          
+      6            Description:   This file contains the interface to the Timer Service.
+      7          
+      8          
+      9            Copyright 2006-2007 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          /*********************************************************************
+     40           NOTE: The following mapping is done between the logical timer
+     41                 names defined in HAL_TIMER.H and the physical HW timer.
+     42          
+     43                 HAL_TIMER_0 --> HW Timer 3  (8-bits)
+     44                 HAL_TIMER_2 --> HW Timer 4  (8-bits)
+     45                 HAL_TIMER_3 --> HW Timer 1  (16-bits)
+     46          
+     47           NOTE: The timer code assumes only one channel, CHANNEL 0, is used
+     48                 for each timer.  There is currently no support for other
+     49                 channels.
+     50          
+     51           NOTE: Only Output Compare Mode is supported.  There is no provision
+     52                 to support Input Capture Mode.
+     53          
+     54           NOTE: There is no support to map the output of the timers to a
+     55                 physical I/O pin
+     56          
+     57          *********************************************************************/
+     58          /*********************************************************************
+     59           * INCLUDES
+     60           */
+     61          #include  "hal_mcu.h"
+     62          #include  "hal_defs.h"
+     63          #include  "hal_types.h"
+     64          #include  "hal_timer.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+
+  typedef void (*halTimerCBack_t) (uint8 timerId, uint8 channel, uint8 channelMode);
+                                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_timer.h",135  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+                                halTimerCBack_t cback );
+                                ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_timer.h",159  Error[Pe020]: 
+          identifier "halTimerCBack_t" is undefined
+     65          
+     66          /*********************************************************************
+     67           * MACROS
+     68           */
+     69          
+     70          /*********************************************************************
+     71           * CONSTANTS
+     72           */
+     73          #define HW_TIMER_1        0x00
+     74          #define HW_TIMER_3        0x01
+     75          #define HW_TIMER_4        0x02
+     76          #define HW_TIMER_INVALID  0x03
+     77          #define HW_TIMER_MAX      0x03
+     78          
+     79          #define IEN1_T1IE     0x02    /* Timer1 Interrupt Enable */
+     80          #define IEN1_T3IE     0x08    /* Timer3 Interrupt Enable */
+     81          #define IEN1_T4IE     0x10    /* Timer4 Interrupt Enable */
+     82          
+     83          #define T1CTL_CH2IF   0x80
+     84          #define T1CTL_CH1IF   0x40
+     85          #define T1CTL_CH0IF   0x20
+     86          #define T1CTL_OVFIF   0x10
+     87          
+     88          #define TIMIF_T1OVFIM 0x40
+     89          #define TIMIF_T4CH1IF 0x20
+     90          #define TIMIF_T4CH0IF 0x10
+     91          #define TIMIF_T4OVFIF 0x08
+     92          #define TIMIF_T3CH1IF 0x04
+     93          #define TIMIF_T3CH0IF 0x02
+     94          #define TIMIF_T3OVFIF 0x01
+     95          
+     96          #define T34CTL_OVFIM  0x80
+     97          
+     98          #define T134CCTL_IM         0x40    /* Interrupt Mask */
+     99          #define T134CCTL_CMP_BITS   0x38    /* Bits[5:3] == CMP[2:0] */
+    100          #define T134CCTL_MODE       0x04    /* Capture(0)/Compare(1) mode */
+    101          #define T134CCTL_CAP_BITS   0x03    /* Bits[1:0] == CAP[1:0] */
+    102          
+    103          #define T134CCTL_CMP_OC     0x18    /* Set output on compare, clear at 0 */
+    104          #define T134CCTL_CAP_RE     0x01    /* Set input capture on rising edge */
+    105          
+    106          /* Timer clock pre-scaler definitions for 16bit timer1 */
+    107          #define HAL_TIMER1_16_TC_DIV1     0x00  /* No clock pre-scaling */
+    108          #define HAL_TIMER1_16_TC_DIV8     0x04  /* Clock pre-scaled by 8 */
+    109          #define HAL_TIMER1_16_TC_DIV32    0x08  /* Clock pre-scaled by 32 */
+    110          #define HAL_TIMER1_16_TC_DIV128   0x0c  /* Clock pre-scaled by 128 */
+    111          #define HAL_TIMER1_16_TC_BITS     0x0c  /* Bits 3:2 */
+    112          
+    113          /* Timer clock pre-scaler definitions for 8bit timer3 and timer4 */
+    114          #define HAL_TIMER34_8_TC_DIV1     0x00  /* No clock pre-scaling */
+    115          #define HAL_TIMER34_8_TC_DIV2     0x20  /* Clock pre-scaled by 2 */
+    116          #define HAL_TIMER34_8_TC_DIV4     0x40  /* Clock pre-scaled by 4 */
+    117          #define HAL_TIMER34_8_TC_DIV8     0x60  /* Clock pre-scaled by 8 */
+    118          #define HAL_TIMER34_8_TC_DIV16    0x80  /* Clock pre-scaled by 16 */
+    119          #define HAL_TIMER34_8_TC_DIV32    0xA0  /* Clock pre-scaled by 32 */
+    120          #define HAL_TIMER34_8_TC_DIV64    0xC0  /* Clock pre-scaled by 64 */
+    121          #define HAL_TIMER34_8_TC_DIV128   0xE0  /* Clock pre-scaled by 128 */
+    122          #define HAL_TIMER34_8_TC_BITS     0xE0  /* Bits 7:5 */
+    123          
+    124          /* Operation Mode definitions */
+    125          #define HAL_TIMER1_OPMODE_STOP      0x00  /* Free Running Mode, Count from 0 to Max */
+    126          #define HAL_TIMER1_OPMODE_FREERUN   0x01  /* Free Running Mode, Count from 0 to Max */
+    127          #define HAL_TIMER1_OPMODE_MODULO    0x02  /* Modulo Mode, Count from 0 to CompareValue */
+    128          #define HAL_TIMER1_OPMODE_BITS      0x03  /* Bits 1:0 */
+    129          
+    130          #define HAL_TIMER34_START           0x10  /* Timer3 and Timer4 have separate Start bit */
+    131          #define HAL_TIMER34_OPMODE_FREERUN  0x00  /* Free Running Mode, Count from 0 to Max */
+    132          #define HAL_TIMER34_OPMODE_MODULO   0x02  /* Modulo Mode, Count from 0 to CompareValue */
+    133          #define HAL_TIMER34_OPMODE_BITS     0x03  /* Bits 1:0 */
+    134          
+    135          #define HAL_TIMER_MODE_STOP         0x03
+    136          
+    137          /* Prescale settings */
+    138          #define HAL_TIMER1_16_PRESCALE      HAL_TIMER1_16_TC_DIV128
+    139          #define HAL_TIMER1_16_PRESCALE_VAL  128
+    140          #define HAL_TIMER3_8_PRESCALE       HAL_TIMER34_8_TC_DIV128
+    141          #define HAL_TIMER3_8_PRESCALE_VAL   128
+    142          #define HAL_TIMER4_8_PRESCALE       HAL_TIMER34_8_TC_DIV128
+    143          #define HAL_TIMER4_8_PRESCALE_VAL   128
+    144          
+    145          /* Clock settings */
+    146          #define HAL_TIMER_16MHZ           16
+    147          #define HAL_TIMER_32MHZ           32
+    148          
+    149          /* Default all timers to use channel 0 */
+    150          #define TCHN_T1CCTL   &(X_T1CCTL0)
+    151          #define TCHN_T1CCL    &(X_T1CC0L)
+    152          #define TCHN_T1CCH    &(X_T1CC0H)
+    153          #define TCNH_T1OVF    &(X_TIMIF)
+    154          #define TCHN_T1OVFBIT TIMIF_T1OVFIM
+    155          #define TCHN_T1INTBIT IEN1_T1IE
+    156          
+    157          #define TCHN_T3CCTL   &(X_T3CCTL0)
+    158          #define TCHN_T3CCL    &(X_T3CC0)
+    159          #define TCHN_T3CCH    &(X_T3CC0)
+    160          #define TCNH_T3OVF    &(X_T3CTL)
+    161          #define TCHN_T3OVFBIT T34CTL_OVFIM
+    162          #define TCHN_T3INTBIT IEN1_T3IE
+    163          
+    164          #define TCHN_T4CCTL   &(X_T4CCTL0)
+    165          #define TCHN_T4CCL    &(X_T4CC0)
+    166          #define TCHN_T4CCH    &(X_T4CC0)
+    167          #define TCNH_T4OVF    &(X_T4CTL)
+    168          #define TCHN_T4OVFBIT T34CTL_OVFIM
+    169          #define TCHN_T4INTBIT IEN1_T4IE
+    170          
+    171          /*********************************************************************
+    172           * TYPEDEFS
+    173           */
+    174          typedef struct
+    175          {
+    176            bool configured;
+    177            bool intEnable;
+    178            uint8 opMode;
+    179            uint8 channel;
+    180            uint8 channelMode;
+    181            uint8 prescale;
+    182            uint8 prescaleVal;
+    183            uint8 clock;
+    184            halTimerCBack_t callBackFunc;
+                   ^
+Error[Pe020]: identifier "halTimerCBack_t" is undefined
+    185          } halTimerSettings_t;
+    186          
+    187          typedef struct
+    188          {
+    189            uint8 volatile XDATA *TxCCTL;
+    190            uint8 volatile XDATA *TxCCH;
+    191            uint8 volatile XDATA *TxCCL;
+    192            uint8 volatile XDATA *TxOVF;
+    193            uint8 ovfbit;
+    194            uint8 intbit;
+    195          } halTimerChannel_t;
+    196          
+    197          /*********************************************************************
+    198           * GLOBAL VARIABLES
+    199           */
+    200          static halTimerSettings_t halTimerRecord[HW_TIMER_MAX];
+    201          static halTimerChannel_t  halTimerChannel[HW_TIMER_MAX];
+    202          
+    203          /*********************************************************************
+    204           * FUNCTIONS - External
+    205           */
+    206          
+    207          /*********************************************************************
+    208           * FUNCTIONS - Local
+    209           */
+    210          uint8 halTimerSetCount (uint8 cc2430id, uint32 timePerTick);
+    211          uint8 halTimerSetPrescale (uint8 cc2430id, uint8 prescale);
+    212          uint8 halTimerSetOpMode (uint8 cc2430id, uint8 opMode);
+    213          uint8 halTimerSetChannelMode (uint8 cc2430id, uint8 channelMode);
+    214          void halTimerSendCallBack (uint8 timerId, uint8 channel, uint8 channelMode);
+    215          uint8 halTimerRemap (uint8 timerId);
+    216          void halProcessTimer1 (void);
+    217          void halProcessTimer3 (void);
+    218          void halProcessTimer4 (void);
+    219          
+    220          
+    221          /*********************************************************************
+    222           * FUNCTIONS - API
+    223           */
+    224          
+    225          /*********************************************************************
+    226           * @fn      HalTimerInit
+    227           *
+    228           * @brief   Initialize Timer Service
+    229           *
+    230           * @param   None
+    231           *
+    232           * @return  None
+    233           */
+    234          void HalTimerInit (void)
+    235          {
+    236            T1CCTL0 = 0;    /* Make sure interrupts are disabled */
+    237            T1CCTL1 = 0;    /* Make sure interrupts are disabled */
+    238            T1CCTL2 = 0;    /* Make sure interrupts are disabled */
+    239            T3CCTL0 = 0;    /* Make sure interrupts are disabled */
+    240            T3CCTL1 = 0;    /* Make sure interrupts are disabled */
+    241            T4CCTL0 = 0;    /* Make sure interrupts are disabled */
+    242            T4CCTL1 = 0;    /* Make sure interrupts are disabled */
+    243          
+    244            /* Setup prescale & clock for timer0 */
+    245            halTimerRecord[HW_TIMER_1].prescale    = HAL_TIMER1_16_PRESCALE;
+    246            halTimerRecord[HW_TIMER_1].clock       = HAL_TIMER_32MHZ;
+    247            halTimerRecord[HW_TIMER_1].prescaleVal = HAL_TIMER1_16_PRESCALE_VAL;
+    248          
+    249            /* Setup prescale & clock for timer2 */
+    250            halTimerRecord[HW_TIMER_3].prescale    = HAL_TIMER3_8_PRESCALE;
+    251            halTimerRecord[HW_TIMER_3].clock       = HAL_TIMER_32MHZ;
+    252            halTimerRecord[HW_TIMER_3].prescaleVal = HAL_TIMER3_8_PRESCALE_VAL;
+    253          
+    254            /* Setup prescale & clock for timer3 */
+    255            halTimerRecord[HW_TIMER_4].prescale    = HAL_TIMER4_8_PRESCALE;
+    256            halTimerRecord[HW_TIMER_4].clock       = HAL_TIMER_32MHZ;
+    257            halTimerRecord[HW_TIMER_4].prescaleVal = HAL_TIMER4_8_PRESCALE_VAL;
+    258          
+    259            /* Setup Timer1 Channel structure */
+    260            halTimerChannel[HW_TIMER_1].TxCCTL =  TCHN_T1CCTL;
+    261            halTimerChannel[HW_TIMER_1].TxCCL =   TCHN_T1CCL;
+    262            halTimerChannel[HW_TIMER_1].TxCCH =   TCHN_T1CCH;
+    263            halTimerChannel[HW_TIMER_1].TxOVF =   TCNH_T1OVF;
+    264            halTimerChannel[HW_TIMER_1].ovfbit =  TCHN_T1OVFBIT;
+    265            halTimerChannel[HW_TIMER_1].intbit =  TCHN_T1INTBIT;
+    266          
+    267            /* Setup Timer3 Channel structure */
+    268            halTimerChannel[HW_TIMER_3].TxCCTL =  TCHN_T3CCTL;
+    269            halTimerChannel[HW_TIMER_3].TxCCL =   TCHN_T3CCL;
+    270            halTimerChannel[HW_TIMER_3].TxCCH =   TCHN_T3CCH;
+    271            halTimerChannel[HW_TIMER_3].TxOVF =   TCNH_T3OVF;
+    272            halTimerChannel[HW_TIMER_3].ovfbit =  TCHN_T3OVFBIT;
+    273            halTimerChannel[HW_TIMER_3].intbit =  TCHN_T3INTBIT;
+    274          
+    275            /* Setup Timer4 Channel structure */
+    276            halTimerChannel[HW_TIMER_4].TxCCTL =  TCHN_T4CCTL;
+    277            halTimerChannel[HW_TIMER_4].TxCCL =   TCHN_T4CCL;
+    278            halTimerChannel[HW_TIMER_4].TxCCH =   TCHN_T4CCH;
+    279            halTimerChannel[HW_TIMER_4].TxOVF =   TCNH_T4OVF;
+    280            halTimerChannel[HW_TIMER_4].ovfbit =  TCHN_T4OVFBIT;
+    281            halTimerChannel[HW_TIMER_4].intbit =  TCHN_T4INTBIT;
+    282          }
+    283          
+    284          /***************************************************************************************************
+    285           * @fn      HalTimerConfig
+    286           *
+    287           * @brief   Configure the Timer Serivce
+    288           *
+    289           * @param   timerId - Id of the timer
+    290           *          opMode  - Operation mode
+    291           *          channel - Channel where the counter operates on
+    292           *          channelMode - Mode of that channel
+    293           *          prescale - Prescale of the clock
+    294           *          cBack - Pointer to the callback function
+    295           *
+    296           * @return  Status of the configuration
+    297           ***************************************************************************************************/
+    298          uint8 HalTimerConfig (uint8 timerId, uint8 opMode, uint8 channel, uint8 channelMode,
+    299                                bool intEnable, halTimerCBack_t cBack)
+                                                       ^
+Error[Pe020]: identifier "halTimerCBack_t" is undefined
+    300          {
+    301            uint8 hwtimerid;
+    302          
+    303            hwtimerid = halTimerRemap (timerId);
+    304          
+    305            if ((opMode & HAL_TIMER_MODE_MASK) && (timerId < HAL_TIMER_MAX) &&
+    306                (channelMode & HAL_TIMER_CHANNEL_MASK) && (channel & HAL_TIMER_CHANNEL_MASK))
+    307            {
+    308              halTimerRecord[hwtimerid].configured    = TRUE;
+    309              halTimerRecord[hwtimerid].opMode        = opMode;
+    310              halTimerRecord[hwtimerid].channel       = channel;
+    311              halTimerRecord[hwtimerid].channelMode   = channelMode;
+    312              halTimerRecord[hwtimerid].intEnable     = intEnable;
+    313              halTimerRecord[hwtimerid].callBackFunc  = cBack;
+    314            }
+    315            else
+    316            {
+    317              return HAL_TIMER_PARAMS_ERROR;
+    318            }
+    319            return HAL_TIMER_OK;
+    320          }
+    321          
+    322          
+    323          /***************************************************************************************************
+    324           * @fn      HalTimerStart
+    325           *
+    326           * @brief   Start the Timer Service
+    327           *
+    328           * @param   timerId      - ID of the timer
+    329           *          timerPerTick - number of micro sec per tick, (ticks x prescale) / clock = usec/tick
+    330           *
+    331           * @return  Status - OK or Not OK
+    332           ***************************************************************************************************/
+    333          uint8 HalTimerStart (uint8 timerId, uint32 timePerTick)
+    334          {
+    335            uint8 hwtimerid;
+    336          
+    337            hwtimerid = halTimerRemap (timerId);
+    338          
+    339            if (halTimerRecord[hwtimerid].configured)
+    340            {
+    341              halTimerSetCount (hwtimerid, timePerTick);
+    342              halTimerSetPrescale (hwtimerid, halTimerRecord[hwtimerid].prescale);
+    343              halTimerSetOpMode (hwtimerid, halTimerRecord[hwtimerid].opMode);
+    344              halTimerSetChannelMode (hwtimerid, halTimerRecord[hwtimerid].channelMode);
+    345          
+    346              if (hwtimerid == HW_TIMER_3)
+    347              {
+    348                T3CTL |= HAL_TIMER34_START;
+    349              }
+    350              if (hwtimerid == HW_TIMER_4)
+    351              {
+    352                T4CTL |= HAL_TIMER34_START;
+    353              }
+    354              HalTimerInterruptEnable (hwtimerid, halTimerRecord[hwtimerid].channelMode,
+    355                                       halTimerRecord[hwtimerid].intEnable);
+    356            }
+    357            else
+    358            {
+    359              return HAL_TIMER_NOT_CONFIGURED;
+    360            }
+    361            return HAL_TIMER_OK;
+    362          }
+    363          
+    364          /***************************************************************************************************
+    365           * @fn      HalTimerTick
+    366           *
+    367           * @brief   Check the counter for expired counter.
+    368           *
+    369           * @param   None
+    370           *
+    371           * @return  None
+    372           ***************************************************************************************************/
+    373          void HalTimerTick (void)
+    374          {
+    375            if (!halTimerRecord[HW_TIMER_1].intEnable)
+    376            {
+    377              halProcessTimer1 ();
+    378            }
+    379          
+    380            if (!halTimerRecord[HW_TIMER_3].intEnable)
+    381            {
+    382              halProcessTimer3 ();
+    383            }
+    384          
+    385            if (!halTimerRecord[HW_TIMER_4].intEnable)
+    386            {
+    387              halProcessTimer4 ();
+    388            }
+    389          }
+    390          
+    391          /***************************************************************************************************
+    392           * @fn      HalTimerStop
+    393           *
+    394           * @brief   Stop the Timer Service
+    395           *
+    396           * @param   timerId - ID of the timer
+    397           *
+    398           * @return  Status - OK or Not OK
+    399           ***************************************************************************************************/
+    400          uint8 HalTimerStop (uint8 timerId)
+    401          {
+    402            uint8 hwtimerid;
+    403          
+    404            hwtimerid = halTimerRemap (timerId);
+    405          
+    406            switch (hwtimerid)
+    407            {
+    408              case HW_TIMER_1:
+    409                halTimerSetOpMode(HW_TIMER_1, HAL_TIMER_MODE_STOP);
+    410                break;
+    411              case HW_TIMER_3:
+    412                T3CTL &= ~(HAL_TIMER34_START);
+    413                break;
+    414              case HW_TIMER_4:
+    415                T4CTL &= ~(HAL_TIMER34_START);
+    416                break;
+    417              default:
+    418                return HAL_TIMER_INVALID_ID;
+    419            }
+    420            return HAL_TIMER_OK;
+    421          }
+    422          
+    423          /***************************************************************************************************
+    424           * @fn      halTimerSetCount
+    425           *
+    426           * @brief   Stop the Timer Service
+    427           *
+    428           * @param   hwtimerid - ID of the timer
+    429           *          timerPerTick - Number micro sec per ticks
+    430           *
+    431           * @return  Status - OK or Not OK
+    432           ***************************************************************************************************/
+    433          uint8 halTimerSetCount (uint8 hwtimerid, uint32 timePerTick)
+    434          {
+    435            uint16  count;
+    436            uint8   high, low;
+    437          
+    438            /* Load count = ((sec/tick) x clock) / prescale */
+    439            count = (uint16)((timePerTick * halTimerRecord[hwtimerid].clock) / halTimerRecord[hwtimerid].prescaleVal);
+    440            high = (uint8) (count >> 8);
+    441            low = (uint8) count;
+    442          
+    443            *(halTimerChannel[hwtimerid].TxCCH) = high;
+    444            *(halTimerChannel[hwtimerid].TxCCL) = low;
+    445          
+    446            return HAL_TIMER_OK;
+    447          }
+    448          
+    449          /***************************************************************************************************
+    450           * @fn      halTimerSetPrescale
+    451           *
+    452           * @brief   Stop the Timer Service
+    453           *
+    454           * @param   hwtimerid - ID of the timer
+    455           *          prescale - Prescale of the clock
+    456           *
+    457           * @return  Status - OK or Not OK
+    458           ***************************************************************************************************/
+    459          uint8 halTimerSetPrescale (uint8 hwtimerid, uint8 prescale)
+    460          {
+    461            switch (hwtimerid)
+    462            {
+    463              case HW_TIMER_1:
+    464                T1CTL &= ~(HAL_TIMER1_16_TC_BITS);
+    465                T1CTL |= prescale;
+    466                break;
+    467              case HW_TIMER_3:
+    468                T3CTL &= ~(HAL_TIMER34_8_TC_BITS);
+    469                T3CTL |= prescale;
+    470                break;
+    471              case HW_TIMER_4:
+    472                T4CTL &= ~(HAL_TIMER34_8_TC_BITS);
+    473                T4CTL |= prescale;
+    474                break;
+    475              default:
+    476                return HAL_TIMER_INVALID_ID;
+    477            }
+    478            return HAL_TIMER_OK;
+    479          }
+    480          
+    481          /***************************************************************************************************
+    482           * @fn      halTimerSetOpMode
+    483           *
+    484           * @brief   Setup operate modes
+    485           *
+    486           * @param   hwtimerid - ID of the timer
+    487           *          opMode - operation mode of the timer
+    488           *
+    489           * @return  Status - OK or Not OK
+    490           ***************************************************************************************************/
+    491          uint8 halTimerSetOpMode (uint8 hwtimerid, uint8 opMode)
+    492          {
+    493            /* Load Waveform Generation Mode */
+    494            switch (opMode)
+    495            {
+    496              case HAL_TIMER_MODE_NORMAL:
+    497                switch (hwtimerid)
+    498                {
+    499                  case HW_TIMER_1:
+    500                    T1CTL &= ~(HAL_TIMER1_OPMODE_BITS);
+    501                    T1CTL |= HAL_TIMER1_OPMODE_FREERUN;
+    502                    break;
+    503                  case HW_TIMER_3:
+    504                    T3CTL &= ~(HAL_TIMER34_OPMODE_BITS);
+    505                    T3CTL |= HAL_TIMER34_OPMODE_FREERUN;
+    506                    break;
+    507                  case HW_TIMER_4:
+    508                    T4CTL &= ~(HAL_TIMER34_OPMODE_BITS);
+    509                    T4CTL |= HAL_TIMER34_OPMODE_FREERUN;
+    510                    break;
+    511                  default:
+    512                    return HAL_TIMER_INVALID_ID;
+    513                }
+    514                break;
+    515          
+    516              case HAL_TIMER_MODE_CTC:
+    517                switch (hwtimerid)
+    518                {
+    519                  case HW_TIMER_1:
+    520                    T1CTL &= ~(HAL_TIMER1_OPMODE_BITS);
+    521                    T1CTL |= HAL_TIMER1_OPMODE_MODULO;
+    522                    break;
+    523                  case HW_TIMER_3:
+    524                    T3CTL &= ~(HAL_TIMER34_OPMODE_BITS);
+    525                    T3CTL |= HAL_TIMER34_OPMODE_MODULO;
+    526                    break;
+    527                  case HW_TIMER_4:
+    528                    T4CTL &= ~(HAL_TIMER34_OPMODE_BITS);
+    529                    T4CTL |= HAL_TIMER34_OPMODE_MODULO;
+    530                    break;
+    531                  default:
+    532                    return HAL_TIMER_INVALID_ID;
+    533                }
+    534                break;
+    535          
+    536              case HAL_TIMER_MODE_STOP:
+    537                if (hwtimerid == HW_TIMER_1)
+    538                {
+    539                  T1CTL &= ~(HAL_TIMER1_OPMODE_BITS);
+    540                  T1CTL |= HAL_TIMER1_OPMODE_STOP;
+    541                }
+    542                break;
+    543          
+    544              default:
+    545                return HAL_TIMER_INVALID_OP_MODE;
+    546            }
+    547            return HAL_TIMER_OK;
+    548          }
+    549          
+    550          /***************************************************************************************************
+    551           * @fn      halTimerSetChannelMode
+    552           *
+    553           * @brief   Setup channel modes.  Currently, only output compare mode is supported.  Input capture
+    554           *          mode is NOT supported.  Additionally, mapping timer channel inputs/outputs to I/O pins
+    555           *          is NOT supported.
+    556           *
+    557           * @param   hwtimerid - ID of the timer
+    558           *          channelMode - channel mode of the timer
+    559           *
+    560           * @return  Status - OK or Not OK
+    561           ***************************************************************************************************/
+    562          uint8 halTimerSetChannelMode (uint8 hwtimerid, uint8 channelMode)
+    563          {
+    564            switch (channelMode)
+    565            {
+    566              case HAL_TIMER_CH_MODE_OUTPUT_COMPARE:
+    567                *(halTimerChannel[hwtimerid].TxCCTL) &= ~(T134CCTL_CMP_BITS);
+    568                *(halTimerChannel[hwtimerid].TxCCTL) |= (T134CCTL_CMP_OC | T134CCTL_MODE);
+    569                break;
+    570          
+    571              case HAL_TIMER_CH_MODE_INPUT_CAPTURE:       /* Not Supported */
+    572          /*
+    573                *(halTimerChannel[hwtimerid].TxCCTL) &= ~(T134CCTL_CAP_BITS | T134CCTL_MODE);
+    574                *(halTimerChannel[hwtimerid].TxCCTL) |= T134CCTL_CAP_RE;
+    575          */
+    576                break;
+    577          
+    578              default:
+    579                return HAL_TIMER_INVALID_CH_MODE;
+    580            }
+    581            return HAL_TIMER_OK;
+    582          }
+    583          
+    584          /***************************************************************************************************
+    585           * @fn      HalTimerInterruptEnable
+    586           *
+    587           * @brief   Setup operate modes
+    588           *
+    589           * @param   hwtimerid - ID of the timer
+    590           *          channelMode - channel mode
+    591           *          enable - TRUE or FALSE
+    592           *
+    593           * @return  Status - OK or Not OK
+    594           ***************************************************************************************************/
+    595          uint8 HalTimerInterruptEnable (uint8 hwtimerid, uint8 channelMode, bool enable)
+    596          {
+    597            switch (channelMode)
+    598            {
+    599              case HAL_TIMER_CH_MODE_OVERFLOW:
+    600          
+    601                if (enable)
+    602                {
+    603                  *(halTimerChannel[hwtimerid].TxOVF) |= halTimerChannel[hwtimerid].ovfbit;
+    604                }
+    605                else
+    606                {
+    607                  *(halTimerChannel[hwtimerid].TxOVF) &= ((halTimerChannel[hwtimerid].ovfbit) ^ 0xFF);
+    608                }
+    609                break;
+    610          
+    611              case HAL_TIMER_CH_MODE_OUTPUT_COMPARE:
+    612              case HAL_TIMER_CH_MODE_INPUT_CAPTURE:
+    613          
+    614                if (enable)
+    615                {
+    616                  *(halTimerChannel[hwtimerid].TxCCTL) |= T134CCTL_IM;
+    617                }
+    618                else
+    619                {
+    620                  *(halTimerChannel[hwtimerid].TxCCTL) &= ~(T134CCTL_IM);
+    621                }
+    622                break;
+    623          
+    624              default:
+    625                return HAL_TIMER_INVALID_CH_MODE;
+    626            }
+    627          
+    628            if (halTimerRecord[hwtimerid].intEnable)
+    629            {
+    630              IEN1 |= halTimerChannel[hwtimerid].intbit;
+    631            }
+    632            else
+    633            {
+    634              IEN1 &= ((halTimerChannel[hwtimerid].intbit) ^ 0xFF);
+    635            }
+    636            return HAL_TIMER_OK;
+    637          }
+    638          
+    639          /***************************************************************************************************
+    640           * @fn      halTimerSendCallBack
+    641           *
+    642           * @brief   Send Callback back to the caller
+    643           *
+    644           * @param   timerId - ID of the timer
+    645           *          channel - channel where the interrupt occurs
+    646           *          channelMode - channel mode
+    647           *
+    648           *
+    649           * @return  None
+    650           ***************************************************************************************************/
+    651          void halTimerSendCallBack (uint8 timerId, uint8 channel, uint8 channelMode)
+    652          {
+    653            uint8 hwtimerid;
+    654          
+    655            hwtimerid = halTimerRemap (timerId);
+    656          
+    657            if (halTimerRecord[hwtimerid].callBackFunc)
+    658              (halTimerRecord[hwtimerid].callBackFunc) (timerId, channel, channelMode);
+    659          }
+    660          
+    661          /***************************************************************************************************
+    662           * @fn      halTimerRemap
+    663           *
+    664           * @brief   Maps API HAL_TIMER_ID to HW Timer ID.
+    665           *          HAL_TIMER_0 --> HW Timer 3 8bit
+    666           *          HAL_TIMER_2 --> HW Timer 4 8bit
+    667           *          HAL_TIMER_3 --> HW Timer 1 16bit
+    668           *
+    669           * @param   timerId - ID of the timer
+    670           *
+    671           * @return  HW timer ID
+    672           ***************************************************************************************************/
+    673          uint8 halTimerRemap (uint8 timerId)
+    674          {
+    675            switch (timerId)
+    676            {
+    677              case HAL_TIMER_0:
+    678                return HW_TIMER_3;
+    679              case HAL_TIMER_2:
+    680                return HW_TIMER_4;
+    681              case HAL_TIMER_3:
+    682                return HW_TIMER_1;
+    683              default:
+    684                return HW_TIMER_INVALID;
+    685            }
+    686          }
+    687          
+    688          /***************************************************************************************************
+    689           * @fn      halProcessTimer1
+    690           *
+    691           * @brief   Processes Timer 1 Events.
+    692           *
+    693           * @param
+    694           *
+    695           * @return
+    696           ***************************************************************************************************/
+    697          void halProcessTimer1 (void)
+    698          {
+    699            if (halTimerRecord[halTimerRemap(HAL_TIMER_3)].channelMode == HAL_TIMER_CH_MODE_OUTPUT_COMPARE)
+    700            {
+    701              if (T1CTL & T1CTL_CH0IF)
+    702              {
+    703                T1CTL &= ~(T1CTL_CH0IF);
+    704                halTimerSendCallBack (HAL_TIMER_3, HAL_TIMER_CHANNEL_A, HAL_TIMER_CH_MODE_OUTPUT_COMPARE);
+    705              }
+    706              if (T1CTL & T1CTL_CH1IF)
+    707              {
+    708                T1CTL &= ~(T1CTL_CH1IF);
+    709                halTimerSendCallBack (HAL_TIMER_3, HAL_TIMER_CHANNEL_B, HAL_TIMER_CH_MODE_OUTPUT_COMPARE);
+    710              }
+    711              if (T1CTL & T1CTL_CH2IF)
+    712              {
+    713                T1CTL &= ~(T1CTL_CH2IF);
+    714                halTimerSendCallBack (HAL_TIMER_3, HAL_TIMER_CHANNEL_C, HAL_TIMER_CH_MODE_OUTPUT_COMPARE);
+    715              }
+    716            }
+    717            else if (halTimerRecord[halTimerRemap(HAL_TIMER_3)].channelMode == HAL_TIMER_CH_MODE_OVERFLOW)
+    718            {
+    719              if (T1CTL & T1CTL_OVFIF)
+    720              {
+    721                T1CTL &= ~(T1CTL_OVFIF);
+    722                halTimerSendCallBack (HAL_TIMER_3, HAL_TIMER_CHANNEL_SINGLE, HAL_TIMER_CH_MODE_OVERFLOW);
+    723              }
+    724            }
+    725          }
+    726          
+    727          /***************************************************************************************************
+    728           * @fn      halProcessTimer3
+    729           *
+    730           * @brief   Processes Timer 3 Events.
+    731           *
+    732           * @param
+    733           *
+    734           * @return
+    735           ***************************************************************************************************/
+    736          void halProcessTimer3 (void)
+    737          {
+    738            if (halTimerRecord[halTimerRemap(HAL_TIMER_0)].channelMode == HAL_TIMER_CH_MODE_OUTPUT_COMPARE)
+    739            {
+    740              if (TIMIF & TIMIF_T3CH0IF)
+    741              {
+    742                TIMIF &= ~(TIMIF_T3CH0IF);
+    743                halTimerSendCallBack (HAL_TIMER_0, HAL_TIMER_CHANNEL_A, HAL_TIMER_CH_MODE_OUTPUT_COMPARE);
+    744              }
+    745              if (TIMIF & TIMIF_T3CH1IF)
+    746              {
+    747                TIMIF &= ~(TIMIF_T3CH1IF);
+    748                halTimerSendCallBack (HAL_TIMER_0, HAL_TIMER_CHANNEL_B, HAL_TIMER_CH_MODE_OUTPUT_COMPARE);
+    749              }
+    750            }
+    751            else if (halTimerRecord[halTimerRemap(HAL_TIMER_0)].channelMode == HAL_TIMER_CH_MODE_OVERFLOW)
+    752            {
+    753              if (TIMIF & TIMIF_T3OVFIF)
+    754              {
+    755                TIMIF &= ~(TIMIF_T3OVFIF);
+    756                halTimerSendCallBack (HAL_TIMER_0, HAL_TIMER_CHANNEL_SINGLE, HAL_TIMER_CH_MODE_OVERFLOW);
+    757              }
+    758            }
+    759          }
+    760          
+    761          /***************************************************************************************************
+    762           * @fn      halProcessTimer4
+    763           *
+    764           * @brief   Processes Timer 4 Events.
+    765           *
+    766           * @param
+    767           *
+    768           * @return
+    769           ***************************************************************************************************/
+    770          void halProcessTimer4 (void)
+    771          {
+    772            if (halTimerRecord[halTimerRemap(HAL_TIMER_2)].channelMode == HAL_TIMER_CH_MODE_OUTPUT_COMPARE)
+    773            {
+    774              if (TIMIF & TIMIF_T4CH0IF)
+    775              {
+    776                TIMIF &= ~(TIMIF_T4CH0IF);
+    777                halTimerSendCallBack (HAL_TIMER_2, HAL_TIMER_CHANNEL_A, HAL_TIMER_CH_MODE_OUTPUT_COMPARE);
+    778              }
+    779              if (TIMIF & TIMIF_T4CH1IF)
+    780              {
+    781                TIMIF &= ~(TIMIF_T4CH1IF);
+    782                halTimerSendCallBack (HAL_TIMER_2, HAL_TIMER_CHANNEL_B, HAL_TIMER_CH_MODE_OUTPUT_COMPARE);
+    783              }
+    784            }
+    785            else if (halTimerRecord[halTimerRemap(HAL_TIMER_2)].channelMode == HAL_TIMER_CH_MODE_OVERFLOW)
+    786            if (TIMIF & TIMIF_T4OVFIF)
+    787            {
+    788              TIMIF &= ~(TIMIF_T4OVFIF);
+    789              halTimerSendCallBack (HAL_TIMER_2, HAL_TIMER_CHANNEL_SINGLE, HAL_TIMER_CH_MODE_OVERFLOW);
+    790            }
+    791          }
+    792          
+    793          /***************************************************************************************************
+    794           *                                    INTERRUPT SERVICE ROUTINE
+    795           ***************************************************************************************************/
+    796          
+    797          /**************************************************************************************************
+    798           * @fn      halTimer1Isr
+    799           *
+    800           * @brief   Timer 1 ISR
+    801           *
+    802           * @param
+    803           *
+    804           * @return
+    805           **************************************************************************************************/
+    806          HAL_ISR_FUNCTION( halTimer1Isr, T1_VECTOR )
+    807          {
+    808            halProcessTimer1 ();
+    809          }
+    810          
+    811          /**************************************************************************************************
+    812           * @fn      halTimer3Isr
+    813           *
+    814           * @brief   Timer 3 ISR
+    815           *
+    816           * @param
+    817           *
+    818           * @return
+    819           **************************************************************************************************/
+    820          HAL_ISR_FUNCTION( halTimer3Isr, T3_VECTOR )
+    821          {
+    822            halProcessTimer3 ();
+    823          }
+    824          
+    825          /**************************************************************************************************
+    826           * @fn      halTimer4Isr
+    827           *
+    828           * @brief   Timer 4 ISR
+    829           *
+    830           * @param
+    831           *
+    832           * @return
+    833           **************************************************************************************************/
+    834          HAL_ISR_FUNCTION( halTimer4Isr, T4_VECTOR )
+    835          {
+    836            halProcessTimer4 ();
+    837          }
+    838          
+    839          /***************************************************************************************************
+    840          ***************************************************************************************************/
+    841          
+
+Errors: 27
+Warnings: 2

@@ -1,0 +1,575 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:31:00 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\hal\target\CC2530EB\hal_flash.c                 #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Componen #
+#                          ts\hal\target\CC2530EB\hal_flash.c -D ZTOOL_P1 -D  #
+#                          MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC -D           #
+#                          LCD_SUPPORTED=DEBUG -lC C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\CoordinatorEB\List\ -lA                    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\ --diag_suppress Pe001,Pa010 -o                 #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\hal_flash.lst                                   #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\hal_flash.r51                                    #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_flash.c
+      1          /**************************************************************************************************
+      2            Filename:       _hal_flash.c
+      3            Revised:        $Date:$
+      4            Revision:       $Revision:$
+      5          
+      6            Description: This file contains the interface to the H/W Flash driver.
+      7          
+      8          
+      9            Copyright 2006-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS” WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED,
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE,
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com.
+     38          **************************************************************************************************/
+     39          
+     40          /* ------------------------------------------------------------------------------------------------
+     41           *                                          Includes
+     42           * ------------------------------------------------------------------------------------------------
+     43           */
+     44          
+     45          #include "hal_board_cfg.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+     46          #include "hal_dma.h"
+
+  } halDMADesc_t;
+                ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_dma.h",278  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+  extern halDMADesc_t dmaCh0;
+         ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_dma.h",284  Error[Pe020]: 
+          identifier "halDMADesc_t" is undefined
+
+  extern halDMADesc_t dmaCh1234[4];
+         ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_dma.h",285  Error[Pe020]: 
+          identifier "halDMADesc_t" is undefined
+     47          #include "hal_flash.h"
+     48          #include "hal_types.h"
+     49          
+     50          /* ------------------------------------------------------------------------------------------------
+     51           *                                           Macros
+     52           * ------------------------------------------------------------------------------------------------
+     53           */
+     54          
+     55          /* ------------------------------------------------------------------------------------------------
+     56           *                                          Constants
+     57           * ------------------------------------------------------------------------------------------------
+     58           */
+     59          
+     60          // These values depend on RAM_CODE_FLASH in the .xcl file used.
+     61          #if defined CC2530F64     // RemoTI is using 0x01DDD --> pg 3, offset 0x5DD.
+     62          #define OSET_OF_RAM_CODE  0x5DD
+     63          #define PAGE_OF_RAM_CODE  3
+     64          #define SIZE_OF_RAM_CODE  0x23
+     65          #elif defined HAL_OAD_BOOT_CODE
+     66                                    // OAD boot code is using 0x7E3 --> pg 0, so same as offset 0x7E3.
+     67          #define OSET_OF_RAM_CODE  0x7E3
+     68          #define PAGE_OF_RAM_CODE  0
+     69          #define SIZE_OF_RAM_CODE  0x1D
+     70          #elif defined HAL_USB_BOOT_CODE
+     71                                    // USB boot code is using 0x7DD --> pg 0, so same as offset 0x7DD.
+     72          #define OSET_OF_RAM_CODE  0x7DD
+     73          #define PAGE_OF_RAM_CODE  0
+     74          #define SIZE_OF_RAM_CODE  0x23
+     75          #else                     // Z-Stack is using 0x39EDD --> pg 51, offset 0x6DD.
+     76          #define OSET_OF_RAM_CODE  0x6DD
+     77          #define PAGE_OF_RAM_CODE  51
+     78          #define SIZE_OF_RAM_CODE  0x23
+     79          #endif
+     80          
+     81          /* ------------------------------------------------------------------------------------------------
+     82           *                                          Typedefs
+     83           * ------------------------------------------------------------------------------------------------
+     84           */
+     85          
+     86          /* ------------------------------------------------------------------------------------------------
+     87           *                                       Global Variables
+     88           * ------------------------------------------------------------------------------------------------
+     89           */
+     90          
+     91          /* ------------------------------------------------------------------------------------------------
+     92           *                                       Global Functions
+     93           * ------------------------------------------------------------------------------------------------
+     94           */
+     95          
+     96          /* ------------------------------------------------------------------------------------------------
+     97           *                                       Local Variables
+     98           * ------------------------------------------------------------------------------------------------
+     99           */
+    100          
+    101          #pragma location="RAM_CODE_XDATA"
+    102          static __no_init uint8 ramCode[SIZE_OF_RAM_CODE];
+    103          
+    104          /* ------------------------------------------------------------------------------------------------
+    105           *                                       Local Functions
+    106           * ------------------------------------------------------------------------------------------------
+    107           */
+    108          
+    109          #pragma location="RAM_CODE_FLASH"
+    110          #if defined HAL_OAD_BOOT_CODE
+    111          static void HalFlashWriteTrigger(void);
+    112          #else
+    113          static __monitor void HalFlashWriteTrigger(void);
+    114          #endif
+    115          
+    116          /**************************************************************************************************
+    117           * @fn          HalFlashInit
+    118           *
+    119           * @brief       This function initializes the environment for this module.
+    120           *
+    121           * input parameters
+    122           *
+    123           * None.
+    124           *
+    125           * output parameters
+    126           *
+    127           * None.
+    128           *
+    129           * @return      None.
+    130           **************************************************************************************************
+    131           */
+    132          void HalFlashInit(void)
+    133          {
+    134            // Load the code to run from RAM into its reserved area of RAM once at startup.
+    135            HalFlashRead(PAGE_OF_RAM_CODE, OSET_OF_RAM_CODE, ramCode, SIZE_OF_RAM_CODE);
+    136          }
+    137          
+    138          /**************************************************************************************************
+    139           * @fn          HalFlashRead
+    140           *
+    141           * @brief       This function reads 'cnt' bytes from the internal flash.
+    142           *
+    143           * input parameters
+    144           *
+    145           * @param       pg - A valid flash page number.
+    146           * @param       offset - A valid offset into the page.
+    147           * @param       buf - A valid buffer space at least as big as the 'cnt' parameter.
+    148           * @param       cnt - A valid number of bytes to read.
+    149           *
+    150           * output parameters
+    151           *
+    152           * None.
+    153           *
+    154           * @return      None.
+    155           **************************************************************************************************
+    156           */
+    157          void HalFlashRead(uint8 pg, uint16 offset, uint8 *buf, uint16 cnt)
+    158          {
+    159            // Calculate the offset into the containing flash bank as it gets mapped into XDATA.
+    160            uint8 *ptr = (uint8 *)(offset + HAL_FLASH_PAGE_MAP) +
+    161                         ((pg % HAL_FLASH_PAGE_PER_BANK) * HAL_FLASH_PAGE_SIZE);
+    162            uint8 memctr = MEMCTR;  // Save to restore.
+    163          
+    164          #if !defined HAL_OAD_BOOT_CODE
+    165            halIntState_t is;
+    166          #endif
+    167          
+    168            pg /= HAL_FLASH_PAGE_PER_BANK;  // Calculate the flash bank from the flash page.
+    169          
+    170          #if !defined HAL_OAD_BOOT_CODE
+    171            HAL_ENTER_CRITICAL_SECTION(is);
+    172          #endif
+    173          
+    174            // Calculate and map the containing flash bank into XDATA.
+    175            MEMCTR = (MEMCTR & 0xF8) | pg;
+    176          
+    177            while (cnt--)
+    178            {
+    179              *buf++ = *ptr++;
+    180            }
+    181          
+    182            MEMCTR = memctr;
+    183          
+    184          #if !defined HAL_OAD_BOOT_CODE
+    185            HAL_EXIT_CRITICAL_SECTION(is);
+    186          #endif
+    187          }
+    188          
+    189          /**************************************************************************************************
+    190           * @fn          HalFlashWrite
+    191           *
+    192           * @brief       This function writes 'cnt' bytes to the internal flash.
+    193           *
+    194           * input parameters
+    195           *
+    196           * @param       addr - Valid HAL flash write address: actual addr / 4 and quad-aligned.
+    197           * @param       buf - Valid buffer space at least as big as 'cnt' X 4.
+    198           * @param       cnt - Number of 4-byte blocks to write.
+    199           *
+    200           * output parameters
+    201           *
+    202           * None.
+    203           *
+    204           * @return      None.
+    205           **************************************************************************************************
+    206           */
+    207          void HalFlashWrite(uint16 addr, uint8 *buf, uint16 cnt)
+    208          {
+    209            halDMADesc_t *ch = HAL_NV_DMA_GET_DESC();
+                   ^
+Error[Pe020]: identifier "halDMADesc_t" is undefined
+
+    halDMADesc_t *ch = HAL_NV_DMA_GET_DESC();
+                  ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Components\hal\target\CC2530EB\hal_flash.c",209  Error[Pe020]: 
+          identifier "ch" is undefined
+    210          
+    211            HAL_DMA_SET_SOURCE(ch, buf);
+    212            HAL_DMA_SET_DEST(ch, &FWDATA);
+    213            HAL_DMA_SET_VLEN(ch, HAL_DMA_VLEN_USE_LEN);
+    214            HAL_DMA_SET_LEN(ch, (cnt * HAL_FLASH_WORD_SIZE));
+    215            HAL_DMA_SET_WORD_SIZE(ch, HAL_DMA_WORDSIZE_BYTE);
+    216            HAL_DMA_SET_TRIG_MODE(ch, HAL_DMA_TMODE_SINGLE);
+    217            HAL_DMA_SET_TRIG_SRC(ch, HAL_DMA_TRIG_FLASH);
+    218            HAL_DMA_SET_SRC_INC(ch, HAL_DMA_SRCINC_1);
+    219            HAL_DMA_SET_DST_INC(ch, HAL_DMA_DSTINC_0);
+    220            // The DMA is to be polled and shall not issue an IRQ upon completion.
+    221            HAL_DMA_SET_IRQ(ch, HAL_DMA_IRQMASK_DISABLE);
+    222            HAL_DMA_SET_M8( ch, HAL_DMA_M8_USE_8_BITS);
+    223            HAL_DMA_SET_PRIORITY(ch, HAL_DMA_PRI_HIGH);
+    224            HAL_DMA_CLEAR_IRQ(HAL_NV_DMA_CH);
+    225            HAL_DMA_ARM_CH(HAL_NV_DMA_CH);
+    226          
+    227            FADDRL = (uint8)addr;
+    228            FADDRH = (uint8)(addr >> 8);
+    229            HalFlashWriteTrigger();
+    230          }
+    231          
+    232          /**************************************************************************************************
+    233           * @fn          HalFlashErase
+    234           *
+    235           * @brief       This function erases the specified page of the internal flash.
+    236           *
+    237           * input parameters
+    238           *
+    239           * @param       pg - A valid flash page number to erase.
+    240           *
+    241           * output parameters
+    242           *
+    243           * None.
+    244           *
+    245           * @return      None.
+    246           **************************************************************************************************
+    247           */
+    248          void HalFlashErase(uint8 pg)
+    249          {
+    250            FADDRH = pg * (HAL_FLASH_PAGE_SIZE / HAL_FLASH_WORD_SIZE / 256);
+    251            FCTL |= 0x01;
+    252          }
+    253          
+    254          /**************************************************************************************************
+    255           * @fn          HalFlashWriteTrigger
+    256           *
+    257           * @brief       This function must be copied to RAM before running because it triggers and then
+    258           *              awaits completion of Flash write, which can only be done from RAM.
+    259           *
+    260           * input parameters
+    261           *
+    262           * None.
+    263           *
+    264           * output parameters
+    265           *
+    266           * None.
+    267           *
+    268           * @return      None.
+    269           **************************************************************************************************
+    270           */
+    271          #if defined HAL_OAD_BOOT_CODE
+    272          #pragma optimize=medium
+    273          static void HalFlashWriteTrigger(void)
+    274          #else
+    275          static __monitor void HalFlashWriteTrigger(void)
+    276          #endif
+    277          {
+    278            MEMCTR |= 0x08;       // Start the Memory Arbiter running CODE from RAM.
+    279            FCTL |= 0x02;         // Trigger the DMA writes.
+    280            while (FCTL & 0x80);  // Wait until writing is done.
+    281            MEMCTR &= ~0x08;      // Stop the Memory Arbiter.
+    282          }
+    283          
+    284          /**************************************************************************************************
+    285          */
+
+Errors: 28
+Warnings: 2

@@ -1,0 +1,1077 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         03/Mar/2021  14:47:50 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\Source\zhanglab.c                #
+#    Command line       =  -f C:\Users\25749\OneDrive\桌面\mynet\Projects\zst #
+#                          ack\Samples\mynetApp\CC2530DB\..\..\..\Tools\CC253 #
+#                          0DB\f8wEndev.cfg (-DCPU32MHZ -DROOT=__near_func    #
+#                          -DBLINK_LEDS) -f C:\Users\25749\OneDrive\桌面\myne #
+#                          t\Projects\zstack\Samples\mynetApp\CC2530DB\..\..\ #
+#                          ..\Tools\CC2530DB\f8wConfig.cfg (-DSECURE=0        #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\Source\zhanglab.c -D ZIGBEEPRO   #
+#                          -D NWK_AUTO_POLL -D ZTOOL_P1 -D MT_TASK -D         #
+#                          MT_SYS_FUNC -D MT_ZDO_FUNC -D LCD_SUPPORTED=DEBUG  #
+#                          -D xPOWER_SAVING -lC C:\Users\25749\OneDrive\桌面\ #
+#                          mynet\Projects\zstack\Samples\mynetApp\CC2530DB\En #
+#                          dDeviceEB-Pro\List\ -lA C:\Users\25749\OneDrive\桌 #
+#                          面\mynet\Projects\zstack\Samples\mynetApp\CC2530DB #
+#                          \EndDeviceEB-Pro\List\ --diag_suppress             #
+#                          Pe001,Pa010 -o C:\Users\25749\OneDrive\桌面\mynet\ #
+#                          Projects\zstack\Samples\mynetApp\CC2530DB\EndDevic #
+#                          eEB-Pro\Obj\ -e --debug --core=plain --dptr=16,1   #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\桌面\mynet\Projects\zst #
+#                          ack\Samples\mynetApp\CC2530DB\ -I                  #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\SOURCE\ -I           #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\TI2530DB #
+#                          \ -I C:\Users\25749\OneDrive\桌面\mynet\Projects\z #
+#                          stack\Samples\mynetApp\CC2530DB\..\..\..\..\..\COM #
+#                          PONENTS\MT\ -I C:\Users\25749\OneDrive\桌面\mynet\ #
+#                          Projects\zstack\Samples\mynetApp\CC2530DB\..\..\.. #
+#                          \..\..\COMPONENTS\HAL\INCLUDE\ -I                  #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\HAL\TARGET\CC2530EB\ -I                         #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\OSAL\MCU\CCSOC\ -I C:\Users\25749\OneDrive\桌面 #
+#                          \mynet\Projects\zstack\Samples\mynetApp\CC2530DB\. #
+#                          .\..\..\..\..\COMPONENTS\OSAL\INCLUDE\ -I          #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\STACK\AF\ -I C:\Users\25749\OneDrive\桌面\mynet #
+#                          \Projects\zstack\Samples\mynetApp\CC2530DB\..\..\. #
+#                          .\..\..\COMPONENTS\STACK\NWK\ -I                   #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\STACK\SEC\ -I C:\Users\25749\OneDrive\桌面\myne #
+#                          t\Projects\zstack\Samples\mynetApp\CC2530DB\..\..\ #
+#                          ..\..\..\COMPONENTS\STACK\SAPI\ -I                 #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\STACK\SYS\ -I C:\Users\25749\OneDrive\桌面\myne #
+#                          t\Projects\zstack\Samples\mynetApp\CC2530DB\..\..\ #
+#                          ..\..\..\COMPONENTS\STACK\ZDO\ -I                  #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\桌面\mynet #
+#                          \Projects\zstack\Samples\mynetApp\CC2530DB\..\..\. #
+#                          .\..\..\COMPONENTS\ZMAC\ -I                        #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\SERVICES\SADDR\ -I C:\Users\25749\OneDrive\桌面 #
+#                          \mynet\Projects\zstack\Samples\mynetApp\CC2530DB\. #
+#                          .\..\..\..\..\COMPONENTS\SERVICES\SDATA\ -I        #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\MAC\INCLUDE\ -I C:\Users\25749\OneDrive\桌面\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MAC\HIGH_LEVEL\ -I           #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\MAC\LOW_LEVEL\srf04\ -I                         #
+#                          C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\..\..\..\..\..\COMPONEN #
+#                          TS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz           #
+#    List file          =  C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\EndDeviceEB-Pro\List\zh #
+#                          anglab.lst                                         #
+#    Object file        =  C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack #
+#                          \Samples\mynetApp\CC2530DB\EndDeviceEB-Pro\Obj\zha #
+#                          nglab.r51                                          #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\桌面\mynet\Projects\zstack\Samples\mynetApp\Source\zhanglab.c
+      1          #include<iocc2530.h>
+
+   \                                 In  segment SFR_AN, at 0x80
+   \   union <unnamed> volatile __sfr _A_P0
+   \                     _A_P0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x86
+   \   unsigned char volatile __sfr U0CSR
+   \                     U0CSR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x89
+   \   unsigned char volatile __sfr P0IFG
+   \                     P0IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8b
+   \   unsigned char volatile __sfr P2IFG
+   \                     P2IFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8c
+   \   unsigned char volatile __sfr PICTL
+   \                     PICTL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x8f
+   \   unsigned char volatile __sfr P0INP
+   \                     P0INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x90
+   \   union <unnamed> volatile __sfr _A_P1
+   \                     _A_P1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x91
+   \   unsigned char volatile __sfr RFIRQF1
+   \                     RFIRQF1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9a
+   \   unsigned char volatile __sfr IEN2
+   \                     IEN2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9d
+   \   unsigned char volatile __sfr SLEEPSTA
+   \                     SLEEPSTA:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0x9e
+   \   unsigned char volatile __sfr CLKCONSTA
+   \                     CLKCONSTA:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xa8
+   \   union <unnamed> volatile __sfr _A_IEN0
+   \                     _A_IEN0:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xab
+   \   unsigned char volatile __sfr P0IEN
+   \                     P0IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xac
+   \   unsigned char volatile __sfr P2IEN
+   \                     P2IEN:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xb8
+   \   union <unnamed> volatile __sfr _A_IEN1
+   \                     _A_IEN1:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xbe
+   \   unsigned char volatile __sfr SLEEPCMD
+   \                     SLEEPCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc0
+   \   union <unnamed> volatile __sfr _A_IRCON
+   \                     _A_IRCON:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc2
+   \   unsigned char volatile __sfr U0BAUD
+   \                     U0BAUD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc5
+   \   unsigned char volatile __sfr U0GCR
+   \                     U0GCR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xc6
+   \   unsigned char volatile __sfr CLKCONCMD
+   \                     CLKCONCMD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xd9
+   \   unsigned char volatile __sfr RFD
+   \                     RFD:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xe1
+   \   unsigned char volatile __sfr RFST
+   \                     RFST:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xe8
+   \   union <unnamed> volatile __sfr _A_IRCON2
+   \                     _A_IRCON2:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf1
+   \   unsigned char volatile __sfr PERCFG
+   \                     PERCFG:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf3
+   \   unsigned char volatile __sfr P0SEL
+   \                     P0SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf4
+   \   unsigned char volatile __sfr P1SEL
+   \                     P1SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf5
+   \   unsigned char volatile __sfr P2SEL
+   \                     P2SEL:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xf7
+   \   unsigned char volatile __sfr P2INP
+   \                     P2INP:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfd
+   \   unsigned char volatile __sfr P0DIR
+   \                     P0DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xfe
+   \   unsigned char volatile __sfr P1DIR
+   \                     P1DIR:
+   \   000000                DS 1
+
+   \                                 In  segment SFR_AN, at 0xff
+   \   unsigned char volatile __sfr P2DIR
+   \                     P2DIR:
+   \   000000                DS 1
+      2          #include"zhanglab.h"
+      3          
+      4          //char SendPacket[]={0x19,0x61,0x88,0x00,0x07,0x20,0xEF,0xBE,0x20,0x50,'h','e','l','l','o',' ','l','a','o',' ','d','a','\r','\n'};
+      5          //第一个字节0x0C含义，这个自己后面还有12个字节要发送
+      6          //第5 6个字节表示的是PANID
+      7          //第7 8个字节是无线模块目标设备的网络地址 0xBEEF
+      8          //第9 10就是本地模块的网络地址
+      9          //11 个字节是我们有用的数据
+     10          // CRC码 12 13个字节 是硬件自动追加
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     11          void halRfInit(void)
+   \                     halRfInit:
+     12          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+     13              EA=0;
+   \   000004   C2AF         CLR     0xa8.7
+     14              FRMCTRL0 |= 0x60;
+   \   000006   906189       MOV     DPTR,#0x6189
+   \   000009   E0           MOVX    A,@DPTR
+   \   00000A   4460         ORL     A,#0x60
+   \   00000C   F0           MOVX    @DPTR,A
+     15              // Recommended RX settings  
+     16              TXFILTCFG = 0x09;
+   \   00000D   9061FA       MOV     DPTR,#0x61fa
+   \   000010   7409         MOV     A,#0x9
+   \   000012   F0           MOVX    @DPTR,A
+     17              AGCCTRL1 = 0x15;
+   \   000013   9061B2       MOV     DPTR,#0x61b2
+   \   000016   7415         MOV     A,#0x15
+   \   000018   F0           MOVX    @DPTR,A
+     18              FSCAL1 = 0x00;
+   \   000019   9061AE       MOV     DPTR,#0x61ae
+   \   00001C   E4           CLR     A
+   \   00001D   F0           MOVX    @DPTR,A
+     19              // enable RXPKTDONE interrupt  
+     20              RFIRQM0 |= 0x40;//把射频接收中断打开
+   \   00001E   9061A3       MOV     DPTR,#0x61a3
+   \   000021   E0           MOVX    A,@DPTR
+   \   000022   D2E6         SETB    0xE0 /* A   */.6
+   \   000024   F0           MOVX    @DPTR,A
+     21              // enable general RF interrupts
+     22              IEN2 |= 0x01;
+   \   000025   439A01       ORL     0x9a,#0x1
+     23              
+     24              FREQCTRL =(11+(25-11)*5);//(MIN_CHANNEL + (channel - MIN_CHANNEL) * CHANNEL_SPACING);   
+   \   000028   90618F       MOV     DPTR,#0x618f
+   \   00002B   7451         MOV     A,#0x51
+   \   00002D   F0           MOVX    @DPTR,A
+     25                               //设置载波为2475M
+     26              PAN_ID0=0x07;
+   \   00002E   906172       MOV     DPTR,#0x6172
+   \   000031   7407         MOV     A,#0x7
+   \   000033   F0           MOVX    @DPTR,A
+     27              PAN_ID1=0x20; //0x2007   
+   \   000034   A3           INC     DPTR
+   \   000035   7420         MOV     A,#0x20
+   \   000037   F0           MOVX    @DPTR,A
+     28          //halRfRxInterruptConfig(basicRfRxFrmDoneIsr);    
+     29              RFST = 0xEC;//清接收缓冲器
+   \   000038   75E1EC       MOV     0xe1,#-0x14
+     30              RFST = 0xE3;//开启接收使能 
+   \   00003B   75E1E3       MOV     0xe1,#-0x1d
+     31              EA=1;    
+   \   00003E   D2AF         SETB    0xa8.7
+     32          }
+   \   000040                REQUIRE ?Subroutine0
+   \   000040                REQUIRE _A_IEN0
+   \   000040                REQUIRE IEN2
+   \   000040                REQUIRE RFST
+   \   000040                ; // Fall through to label ?Subroutine0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine0:
+   \   000000   D083         POP     DPH
+   \   000002   D082         POP     DPL
+   \   000004   02....       LJMP    ?BRET
+     33          
+     34          
+     35          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     36          void RFSend(char *pstr,char len)
+   \                     RFSend:
+     37          {
+   \   000000   74F6         MOV     A,#-0xa
+   \   000002   12....       LCALL   ?BANKED_ENTER_XDATA
+   \   000005                ; Saved register size: 10
+   \   000005                ; Auto size: 0
+     38            char i;
+     39              RFST = 0xEC; //确保接收是空的
+   \   000005   75E1EC       MOV     0xe1,#-0x14
+     40              RFST = 0xE3; //清接收标志位
+   \   000008   75E1E3       MOV     0xe1,#-0x1d
+     41              while (FSMSTAT1 & 0x22);//等待射频发送准备好
+   \                     ??RFSend_0:
+   \   00000B   906193       MOV     DPTR,#0x6193
+   \   00000E   E0           MOVX    A,@DPTR
+   \   00000F   5422         ANL     A,#0x22
+   \   000011   70F8         JNZ     ??RFSend_0
+     42              RFST = 0xEE;//确保发送队列是空
+   \   000013   75E1EE       MOV     0xe1,#-0x12
+     43              RFIRQF1 &= ~0x02;//清发送标志位
+   \   000016   5391FD       ANL     0x91,#0xfd
+     44          //为数据发送做好准备工作
+     45              for(i=0;i<len;i++)
+   \   000019   7800         MOV     R0,#0x0
+   \   00001B   8010         SJMP    ??RFSend_1
+     46              {
+     47                 RFD=pstr[i];
+   \                     ??RFSend_2:
+   \   00001D   88..         MOV     ?V0 + 0,R0
+   \   00001F   EA           MOV     A,R2
+   \   000020   25..         ADD     A,?V0 + 0
+   \   000022   F582         MOV     DPL,A
+   \   000024   EB           MOV     A,R3
+   \   000025   3400         ADDC    A,#0x0
+   \   000027   F583         MOV     DPH,A
+   \   000029   E0           MOVX    A,@DPTR
+   \   00002A   F5D9         MOV     0xd9,A
+     48              }  //循环的作用是把我们要发送的数据全部压到发送缓冲区里面
+   \   00002C   08           INC     R0
+   \                     ??RFSend_1:
+   \   00002D   E8           MOV     A,R0
+   \   00002E   C3           CLR     C
+   \   00002F   99           SUBB    A,R1
+   \   000030   40EB         JC      ??RFSend_2
+     49              RFST = 0xE9; //这个寄存器一旦被设置为0xE9,发送缓冲区的数据就被发送出去
+   \   000032   75E1E9       MOV     0xe1,#-0x17
+     50              while(!(RFIRQF1 & 0x02) );//等待发送完成
+   \                     ??RFSend_3:
+   \   000035   E591         MOV     A,0x91
+   \   000037   A2E1         MOV     C,0xE0 /* A   */.1
+   \   000039   50FA         JNC     ??RFSend_3
+     51              RFIRQF1 = ~0x02;//清发送完成标志
+   \   00003B   7591FD       MOV     0x91,#-0x3
+     52          }
+   \   00003E   7F02         MOV     R7,#0x2
+   \   000040   02....       LJMP    ?BANKED_LEAVE_XDATA
+   \   000043                REQUIRE RFST
+   \   000043                REQUIRE RFIRQF1
+   \   000043                REQUIRE RFD
+     53          
+     54          
+     55          
+     56          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     57          void lightupD1()
+   \                     lightupD1:
+     58          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     59            P1SEL &=0xFE;//1111 1110
+   \   000000   12....       LCALL   ?Subroutine1 & 0xFFFF
+     60            P1DIR |=0x01;//0000 0001
+     61            P1_0=0;
+   \                     ??CrossCallReturnLabel_0:
+   \   000003   C290         CLR     0x90.0
+     62          }
+   \   000005   02....       LJMP    ?BRET
+   \   000008                REQUIRE P1SEL
+   \   000008                REQUIRE P1DIR
+   \   000008                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine1:
+   \   000000   53F4FE       ANL     0xf4,#0xfe
+   \   000003   43FE01       ORL     0xfe,#0x1
+   \   000006   22           RET
+     63          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     64          void lightoffD1()
+   \                     lightoffD1:
+     65          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     66            P1SEL &=0xFE;//1111 1110
+   \   000000   12....       LCALL   ?Subroutine1 & 0xFFFF
+     67            P1DIR |=0x01;//0000 0001
+     68            P1_0=1;
+   \                     ??CrossCallReturnLabel_1:
+   \   000003   D290         SETB    0x90.0
+     69          }
+   \   000005   02....       LJMP    ?BRET
+   \   000008                REQUIRE P1SEL
+   \   000008                REQUIRE P1DIR
+   \   000008                REQUIRE _A_P1
+     70          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     71          void lightchangeD1()
+   \                     lightchangeD1:
+     72          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     73            P1SEL &=0xFE;//1111 1110
+   \   000000   12....       LCALL   ?Subroutine1 & 0xFFFF
+     74            P1DIR |=0x01;//0000 0001
+     75            P1_0^=1;
+   \                     ??CrossCallReturnLabel_2:
+   \   000003   639001       XRL     0x90,#0x1
+     76          }
+   \   000006   02....       LJMP    ?BRET
+   \   000009                REQUIRE P1SEL
+   \   000009                REQUIRE P1DIR
+   \   000009                REQUIRE _A_P1
+     77          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     78          void lightupD2()
+   \                     lightupD2:
+     79          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     80            P1SEL &=0xFD;//1111 1101
+   \   000000   12....       LCALL   ?Subroutine2 & 0xFFFF
+     81            P1DIR |=0x02;//0000 0010
+     82            P1_1=0;
+   \                     ??CrossCallReturnLabel_3:
+   \   000003   C291         CLR     0x90.1
+     83          }
+   \   000005   02....       LJMP    ?BRET
+   \   000008                REQUIRE P1SEL
+   \   000008                REQUIRE P1DIR
+   \   000008                REQUIRE _A_P1
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine2:
+   \   000000   53F4FD       ANL     0xf4,#0xfd
+   \   000003   43FE02       ORL     0xfe,#0x2
+   \   000006   22           RET
+     84          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     85          void lightoffD2()
+   \                     lightoffD2:
+     86          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     87            P1SEL &=0xFD;//1111 1101
+   \   000000   12....       LCALL   ?Subroutine2 & 0xFFFF
+     88            P1DIR |=0x02;//0000 0010
+     89            P1_1=1;
+   \                     ??CrossCallReturnLabel_4:
+   \   000003   D291         SETB    0x90.1
+     90          }
+   \   000005   02....       LJMP    ?BRET
+   \   000008                REQUIRE P1SEL
+   \   000008                REQUIRE P1DIR
+   \   000008                REQUIRE _A_P1
+     91          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     92          void lightchangeD2()
+   \                     lightchangeD2:
+     93          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+     94            P1SEL &=0xFD;//1111 1101
+   \   000000   12....       LCALL   ?Subroutine2 & 0xFFFF
+     95            P1DIR |=0x02;//0000 0010
+     96            P1_1^=1;
+   \                     ??CrossCallReturnLabel_5:
+   \   000003   639002       XRL     0x90,#0x2
+     97          }
+   \   000006   02....       LJMP    ?BRET
+   \   000009                REQUIRE P1SEL
+   \   000009                REQUIRE P1DIR
+   \   000009                REQUIRE _A_P1
+     98          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+     99          void lightupD3()
+   \                     lightupD3:
+    100          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    101            P0SEL &=0xEF;//1110 1111
+   \   000000   12....       LCALL   ?Subroutine3 & 0xFFFF
+    102            P0DIR |=0x10;//0001 0000
+    103            P0_4=0;
+   \                     ??CrossCallReturnLabel_6:
+   \   000003   C284         CLR     0x80.4
+    104          }
+   \   000005   02....       LJMP    ?BRET
+   \   000008                REQUIRE P0SEL
+   \   000008                REQUIRE P0DIR
+   \   000008                REQUIRE _A_P0
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+   \                     ?Subroutine3:
+   \   000000   53F3EF       ANL     0xf3,#0xef
+   \   000003   43FD10       ORL     0xfd,#0x10
+   \   000006   22           RET
+    105          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    106          void lightoffD3()
+   \                     lightoffD3:
+    107          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    108            P0SEL &=0xEF;//1110 1111
+   \   000000   12....       LCALL   ?Subroutine3 & 0xFFFF
+    109            P0DIR |=0x10;//0001 0000
+    110            P0_4=1;
+   \                     ??CrossCallReturnLabel_7:
+   \   000003   D284         SETB    0x80.4
+    111          }
+   \   000005   02....       LJMP    ?BRET
+   \   000008                REQUIRE P0SEL
+   \   000008                REQUIRE P0DIR
+   \   000008                REQUIRE _A_P0
+    112          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    113          void lightchangeD3()
+   \                     lightchangeD3:
+    114          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    115            P0SEL &=0xEF;//1110 1111
+   \   000000   12....       LCALL   ?Subroutine3 & 0xFFFF
+    116            P0DIR |=0x10;//0001 0000
+    117            P0_4^=1;
+   \                     ??CrossCallReturnLabel_8:
+   \   000003   638010       XRL     0x80,#0x10
+    118          }
+   \   000006   02....       LJMP    ?BRET
+   \   000009                REQUIRE P0SEL
+   \   000009                REQUIRE P0DIR
+   \   000009                REQUIRE _A_P0
+    119          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    120          void delay()
+   \                     delay:
+    121          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    122            int i;
+    123            for(i=0;i<30000;i++){};
+    124            for(i=0;i<30000;i++){};
+    125            for(i=0;i<30000;i++){};
+    126            for(i=0;i<30000;i++){};
+    127            for(i=0;i<30000;i++){};
+    128            for(i=0;i<30000;i++){};
+    129            for(i=0;i<30000;i++){};
+    130            for(i=0;i<30000;i++){};
+    131          }
+   \   000000   02....       LJMP    ?BRET
+    132          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    133          void delays()
+   \                     delays:
+    134          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    135            int i;
+    136            for(i=0;i<30000;i++){};
+    137            for(i=0;i<30000;i++){};
+    138            for(i=0;i<30000;i++){};
+    139          }
+   \   000000   02....       LJMP    ?BRET
+    140          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    141          void configurekey1()
+   \                     configurekey1:
+    142          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    143            P0IFG=0; //这两条在中断出去的时候都要清0，这次我们配的是P0组所以就是P0IFG
+   \   000000   758900       MOV     0x89,#0x0
+    144            P0IF=0;
+   \   000003   C2C5         CLR     0xc0.5
+    145            P0SEL &=0xFD;// 1111 1101 //P0_1这个就是配置P0_1为普通IO
+   \   000005   53F3FD       ANL     0xf3,#0xfd
+    146            P0DIR &=0xFD;// 1111 1101 //P0_1配置输入
+   \   000008   53FDFD       ANL     0xfd,#0xfd
+    147            P0INP &=0xFD;// 1111 1101 //P0_1上下拉
+   \   00000B   538FFD       ANL     0x8f,#0xfd
+    148            P2INP &=0xDF;// 1101 1111 //P0_1上拉
+   \   00000E   53F7DF       ANL     0xf7,#0xdf
+    149            EA=1;//开总中断
+   \   000011   D2AF         SETB    0xa8.7
+    150            P0IE=1;//PO组中断打开
+   \   000013   D2BD         SETB    0xb8.5
+    151            P0IEN |=0X02;// 0000 0010 PO_1中断打开
+   \   000015   43AB02       ORL     0xab,#0x2
+    152            PICTL |=0x01;//把P0这一组配置成下降沿触发
+   \   000018   438C01       ORL     0x8c,#0x1
+    153          }
+   \   00001B   02....       LJMP    ?BRET
+   \   00001E                REQUIRE P0IFG
+   \   00001E                REQUIRE _A_IRCON
+   \   00001E                REQUIRE P0SEL
+   \   00001E                REQUIRE P0DIR
+   \   00001E                REQUIRE P0INP
+   \   00001E                REQUIRE P2INP
+   \   00001E                REQUIRE _A_IEN0
+   \   00001E                REQUIRE _A_IEN1
+   \   00001E                REQUIRE P0IEN
+   \   00001E                REQUIRE PICTL
+    154          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    155          void configurekey2()
+   \                     configurekey2:
+    156          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    157            P2IFG=0; //这两条在中断出去的时候都要清0，这次我们配的是P0组所以就是P0IFG 
+   \   000000   758B00       MOV     0x8b,#0x0
+    158            P2IF=0;
+   \   000003   C2E8         CLR     0xe8.0
+    159            P2SEL &=0xFE;// 1111 1110 P2_0 这个就是配置P2_0为普通IO
+   \   000005   53F5FE       ANL     0xf5,#0xfe
+    160            P2DIR &=0xFE;// 1111 1110 P2_0配置输入
+   \   000008   53FFFE       ANL     0xff,#0xfe
+    161            P2INP &=0xFE;// 1111 1110 //P2_0上下拉
+   \   00000B   53F7FE       ANL     0xf7,#0xfe
+    162            P2INP &=0x7F;// 0111 1111 //P2_0上拉
+   \   00000E   53F77F       ANL     0xf7,#0x7f
+    163            EA=1;//开总中断
+   \   000011   D2AF         SETB    0xa8.7
+    164            IEN2 |=0x02;//0000 0010 P2组中断打开
+   \   000013   439A02       ORL     0x9a,#0x2
+    165            P2IEN |=0x01;//0000 0001 P2_0中断打开
+   \   000016   43AC01       ORL     0xac,#0x1
+    166            PICTL |=0x08;//0000 1000 把P2_0到P2_4配置为下降沿触发
+   \   000019   438C08       ORL     0x8c,#0x8
+    167          }
+   \   00001C   02....       LJMP    ?BRET
+   \   00001F                REQUIRE P2IFG
+   \   00001F                REQUIRE _A_IRCON2
+   \   00001F                REQUIRE P2SEL
+   \   00001F                REQUIRE P2DIR
+   \   00001F                REQUIRE P2INP
+   \   00001F                REQUIRE _A_IEN0
+   \   00001F                REQUIRE IEN2
+   \   00001F                REQUIRE P2IEN
+   \   00001F                REQUIRE PICTL
+    168          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    169          void set32Mclock()
+   \                     set32Mclock:
+    170          {
+   \   000000   C082         PUSH    DPL
+   \   000002   C083         PUSH    DPH
+   \   000004                ; Saved register size: 2
+   \   000004                ; Auto size: 0
+    171            SLEEPCMD &=0xFB;//1111 1011开启两个高频时钟源
+   \   000004   53BEFB       ANL     0xbe,#0xfb
+    172            while((SLEEPSTA&0x40)==0){}//0100 0000直到时钟源稳定
+   \                     ??set32Mclock_0:
+   \   000007   E59D         MOV     A,0x9d
+   \   000009   A2E6         MOV     C,0xE0 /* A   */.6
+   \   00000B   50FA         JNC     ??set32Mclock_0
+    173            delays();//延时一会儿（超过63us
+   \   00000D                ; Setup parameters for call to function delays
+   \   00000D   12....       LCALL   ??delays?relay
+    174            CLKCONCMD &=0xF8;//1111 1000不分频
+   \   000010   53C6F8       ANL     0xc6,#0xf8
+    175            CLKCONCMD &=0xBF;//1011 1111 将时钟切换到32M
+   \   000013   53C6BF       ANL     0xc6,#0xbf
+    176            while(CLKCONSTA&0x40){}//直到切换完成
+   \                     ??set32Mclock_1:
+   \   000016   E59E         MOV     A,0x9e
+   \   000018   A2E6         MOV     C,0xE0 /* A   */.6
+   \   00001A   40FA         JC      ??set32Mclock_1
+    177          }
+   \   00001C   02....       LJMP    ?Subroutine0 & 0xFFFF
+   \   00001F                REQUIRE SLEEPCMD
+   \   00001F                REQUIRE SLEEPSTA
+   \   00001F                REQUIRE CLKCONCMD
+   \   00001F                REQUIRE CLKCONSTA
+    178          
+
+   \                                 In  segment BANKED_CODE, align 1, keep-with-next
+    179          void uart()
+   \                     uart:
+    180          {
+   \   000000                ; Saved register size: 0
+   \   000000                ; Auto size: 0
+    181            PERCFG &=0xFE;//1111 1110选中开发板上的相应串口引脚口P0_2 P0_3
+   \   000000   53F1FE       ANL     0xf1,#0xfe
+    182            P0SEL |=0x0C;//0000 1100将这两个引脚配置成片上外设的模式
+   \   000003   43F30C       ORL     0xf3,#0xc
+    183            U0CSR |=0xC0;//8数据位，1停止位，无流控，无校验
+   \   000006   4386C0       ORL     0x86,#0xc0
+    184            
+    185            U0GCR =11;//配置波特率为115200
+   \   000009   75C50B       MOV     0xc5,#0xb
+    186            U0BAUD =216;
+   \   00000C   75C2D8       MOV     0xc2,#-0x28
+    187            
+    188            URX0IE=1;//把中断打开
+   \   00000F   D2AA         SETB    0xa8.2
+    189            EA=1;
+   \   000011   D2AF         SETB    0xa8.7
+    190          }
+   \   000013   02....       LJMP    ?BRET
+   \   000016                REQUIRE PERCFG
+   \   000016                REQUIRE P0SEL
+   \   000016                REQUIRE U0CSR
+   \   000016                REQUIRE U0GCR
+   \   000016                REQUIRE U0BAUD
+   \   000016                REQUIRE _A_IEN0
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??halRfInit?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    halRfInit
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??RFSend?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    RFSend
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightupD1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightupD1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightoffD1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightoffD1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightchangeD1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightchangeD1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightupD2?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightupD2
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightoffD2?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightoffD2
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightchangeD2?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightchangeD2
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightupD3?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightupD3
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightoffD3?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightoffD3
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??lightchangeD3?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    lightchangeD3
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delay?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delay
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??delays?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    delays
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??configurekey1?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    configurekey1
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??configurekey2?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    configurekey2
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??set32Mclock?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    set32Mclock
+
+   \                                 In  segment BANK_RELAYS, align 1
+   \                     ??uart?relay:
+   \   000000   12....       LCALL   ?BDISPATCH
+   \   000003   ......       DC24    uart
+    191          
+    192          //void LCD_coordinator()
+    193          //{
+    194          //    int i=0;
+    195          //    for(i=0; i<4; i++)
+    196          //    {
+    197          //      LCD_P16x16Ch(16*(i+2), 0, i);
+    198          //    }
+    199          //    for(i=0; i<7; i++)
+    200          //    {
+    201          //      LCD_P16x16Ch(8+16*i, 2, 4+i);
+    202          //    }
+    203          //    //LCD_P8x16Str(16, 4, "QQ:2357481431");
+    204          //    //LCD_P8x16Str(32, 6, "2014-10-01");
+    205          //}
+    206          
+    207          /////////////////////////////////////////////////////////////////串口中断函数
+    208          
+    209          
+    210          
+    211          //#pragma vector=URX0_VECTOR
+    212          //__interrupt void chuankou()
+    213          //{
+    214          //  char ch;
+    215          //  URX0IF=0;//将标志位清零
+    216          //  ch=U0DBUF;//将数据从寄存器中读出来
+    217          //  
+    218          //  U0DBUF=ch;//将数据从寄存器中发出去
+    219          //  while(UTX0IF==0){}//一直等到数据发送完毕
+    220          //  
+    221          //  UTX0IF=0;
+    222          //  lightupD1();
+    223          //  delay();
+    224          //}
+    225          
+    226          
+    227          
+    228          
+    229          ///////////////////////////////////////////////////////////////按键1中断函数
+    230          
+    231          
+    232          
+    233          
+    234          
+    235          //#pragma vector=P0INT_VECTOR//这是固定模式，咱们配第0组，所以是P0INT
+    236          //__interrupt void key1() //按键1引发中断
+    237          //{
+    238          //  if(P0IFG & 0x02)// 0010 0000如果P0_5发生了中断，P0IFG会变成1→进入if语句
+    239          //  {//P0组的第1位 P0_1引发了外部中断
+    240          //    //还需要消抖
+    241          //  }
+    242          //  P0IFG=0; //这两条在中断出去的时候都要清0，这次我们配的是P0组所以就是P0IFG
+    243          //  P0IF=0;//这两条在中断出去的时候都要清0，这次我们配的是P0组所以就是P0IF
+    244          //}
+    245          
+    246          
+    247          
+    248          
+    249          ////////////////////////////////////////////////////////////////按键2中断函数
+    250          
+    251          
+    252          
+    253          
+    254          
+    255          //#pragma vector=P2INT_VECTOR//这是固定模式，咱们配第0组，所以是P0INT
+    256          //__interrupt void key2() //按键1引发中断
+    257          //{
+    258          //  if(P2IFG & 0x01)// 0000 0001如果P2_0发生了中断，P0IFG会变成1→进入if语句
+    259          //  {//P0组的第1位 P0_1引发了外部中断
+    260          //    //还需要消抖
+    261          //  }
+    262          //  P2IFG=0; //这两条在中断出去的时候都要清0，这次我们配的是P0组所以就是P0IFG
+    263          //  P2IF=0;//这两条在中断出去的时候都要清0，这次我们配的是P0组所以就是P0IF
+    264          //}
+    265          
+    266          
+    267          
+    268          /////////////////////////////////////////////////////////////射频接收函数
+    269          //#pragma vector=RF_VECTOR
+    270          //__interrupt void RF_IRQ(void)
+    271          //{//这个是射频中断函数，当小灯模块接收到开关模块发送来的数据时，小灯模块的CPU就会进入中断函数执行
+    272          //    EA=0;
+    273          //    if( RFIRQF0 & 0x40 )
+    274          //    {            
+    275          //        RFIRQF0&= ~0x40;   // Clear RXPKTDONE interrupt
+    276          //    }
+    277          //    S1CON= 0;                   // Clear general RF interrupt flag
+    278          //    RFST = 0xEC;//清接收缓冲器
+    279          //    RFST = 0xE3;//开启接收使能 
+    280          //    EA=1;
+    281          //}
+
+   Maximum stack usage in bytes:
+
+     Function      ISTACK PSTACK XSTACK
+     --------      ------ ------ ------
+     RFSend            0      0     10
+     configurekey1     0      0      0
+     configurekey2     0      0      0
+     delay             0      0      0
+     delays            0      0      0
+     halRfInit         2      0      0
+     lightchangeD1     0      0      0
+     lightchangeD2     0      0      0
+     lightchangeD3     0      0      0
+     lightoffD1        0      0      0
+     lightoffD2        0      0      0
+     lightoffD3        0      0      0
+     lightupD1         0      0      0
+     lightupD2         0      0      0
+     lightupD3         0      0      0
+     set32Mclock       2      0      0
+       -> delays       4      0      0
+     uart              0      0      0
+
+
+   Segment part sizes:
+
+     Function/Label        Bytes
+     --------------        -----
+     _A_P0                    1
+     U0CSR                    1
+     P0IFG                    1
+     P2IFG                    1
+     PICTL                    1
+     P0INP                    1
+     _A_P1                    1
+     RFIRQF1                  1
+     IEN2                     1
+     SLEEPSTA                 1
+     CLKCONSTA                1
+     _A_IEN0                  1
+     P0IEN                    1
+     P2IEN                    1
+     _A_IEN1                  1
+     SLEEPCMD                 1
+     _A_IRCON                 1
+     U0BAUD                   1
+     U0GCR                    1
+     CLKCONCMD                1
+     RFD                      1
+     RFST                     1
+     _A_IRCON2                1
+     PERCFG                   1
+     P0SEL                    1
+     P1SEL                    1
+     P2SEL                    1
+     P2INP                    1
+     P0DIR                    1
+     P1DIR                    1
+     P2DIR                    1
+     halRfInit               64
+     ?Subroutine0             7
+     RFSend                  67
+     lightupD1                8
+     ?Subroutine1             7
+     lightoffD1               8
+     lightchangeD1            9
+     lightupD2                8
+     ?Subroutine2             7
+     lightoffD2               8
+     lightchangeD2            9
+     lightupD3                8
+     ?Subroutine3             7
+     lightoffD3               8
+     lightchangeD3            9
+     delay                    3
+     delays                   3
+     configurekey1           30
+     configurekey2           31
+     set32Mclock             31
+     uart                    22
+     ??halRfInit?relay        6
+     ??RFSend?relay           6
+     ??lightupD1?relay        6
+     ??lightoffD1?relay       6
+     ??lightchangeD1?relay    6
+     ??lightupD2?relay        6
+     ??lightoffD2?relay       6
+     ??lightchangeD2?relay    6
+     ??lightupD3?relay        6
+     ??lightoffD3?relay       6
+     ??lightchangeD3?relay    6
+     ??delay?relay            6
+     ??delays?relay           6
+     ??configurekey1?relay    6
+     ??configurekey2?relay    6
+     ??set32Mclock?relay      6
+     ??uart?relay             6
+
+ 
+ 354 bytes in segment BANKED_CODE
+ 102 bytes in segment BANK_RELAYS
+  31 bytes in segment SFR_AN
+ 
+ 456 bytes of CODE memory
+   0 bytes of DATA memory (+ 31 bytes shared)
+
+Errors: none
+Warnings: none

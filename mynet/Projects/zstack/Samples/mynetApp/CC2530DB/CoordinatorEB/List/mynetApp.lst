@@ -1,0 +1,801 @@
+###############################################################################
+#                                                                             #
+# IAR C/C++ Compiler V8.10.3.10338/W32 for 8051         11/Apr/2021  11:30:59 #
+# Copyright 2004-2011 IAR Systems AB.                                         #
+#                                                                             #
+#    Core               =  plain                                              #
+#    Code model         =  banked                                             #
+#    Data model         =  large                                              #
+#    Calling convention =  xdata reentrant                                    #
+#    Constant location  =  data_rom                                           #
+#    Dptr setup         =  1,16                                               #
+#    Source file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\Source\mynetApp.c         #
+#    Command line       =  -f C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\..\..\..\Tool #
+#                          s\CC2530DB\f8wCoord.cfg (-DCPU32MHZ                #
+#                          -DROOT=__near_func -DMAC_CFG_APP_PENDING_QUEUE=TRU #
+#                          E -DZDO_COORDINATOR -DRTR_NWK -DBLINK_LEDS) -f     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\Tools\C #
+#                          C2530DB\f8wConfig.cfg (-DSECURE=0                  #
+#                          -DZG_SECURE_DYNAMIC=0 -DREFLECTOR                  #
+#                          -DDEFAULT_CHANLIST=0x00000800                      #
+#                          -DZDAPP_CONFIG_PAN_ID=0xFFFF                       #
+#                          -DNWK_START_DELAY=100 -DEXTENDED_JOINING_RANDOM_MA #
+#                          SK=0x007F -DBEACON_REQUEST_DELAY=100               #
+#                          -DBEACON_REQ_DELAY_MASK=0x00FF                     #
+#                          -DROUTE_EXPIRY_TIME=30 -DAPSC_ACK_WAIT_DURATION_PO #
+#                          LLED=3000 -DNWK_INDIRECT_MSG_TIMEOUT=7             #
+#                          -DMAX_RREQ_ENTRIES=8 -DAPSC_MAX_FRAME_RETRIES=3    #
+#                          -DNWK_MAX_DATA_RETRIES=2                           #
+#                          -DMAX_POLL_FAILURE_RETRIES=2 -DMAX_BCAST=9         #
+#                          -DAPS_MAX_GROUPS=16 -DMAX_RTG_ENTRIES=40           #
+#                          -DNWK_MAX_BINDING_ENTRIES=4                        #
+#                          -DMAX_BINDING_CLUSTER_IDS=4 "-DDEFAULT_KEY={0x01,  #
+#                          0x03, 0x05, 0x07, 0x09, 0x0B, 0x0D, 0x0F, 0x00,    #
+#                          0x02, 0x04, 0x06, 0x08, 0x0A, 0x0C, 0x0D}"         #
+#                          -DMAC_MAX_FRAME_SIZE=116 "-DCONST=const __code"    #
+#                          -DGENERIC=__generic -DRFD_RCVC_ALWAYS_ON=FALSE     #
+#                          -DPOLL_RATE=1000 -DQUEUED_POLL_RATE=100            #
+#                          -DRESPONSE_POLL_RATE=100) -DREJOIN_POLL_RATE=440   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\Source\mynetApp.c -D      #
+#                          ZTOOL_P1 -D MT_TASK -D MT_SYS_FUNC -D MT_ZDO_FUNC  #
+#                          -D LCD_SUPPORTED=DEBUG -lC                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\ -lA C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\ #
+#                          Projects\zstack\Samples\mynetApp\CC2530DB\Coordina #
+#                          torEB\List\ --diag_suppress Pe001,Pa010 -o         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\ -e --debug --core=plain --dptr=16,1             #
+#                          --data_model=large --code_model=banked             #
+#                          --calling_convention=xdata_reentrant               #
+#                          --place_constants=data_rom --nr_virtual_regs 16    #
+#                          -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Proje #
+#                          cts\zstack\Samples\mynetApp\CC2530DB\ -I           #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\SOURCE\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\ZMAIN\T #
+#                          I2530DB\ -I C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\my #
+#                          net\Projects\zstack\Samples\mynetApp\CC2530DB\..\. #
+#                          .\..\..\..\COMPONENTS\MT\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\HAL\TARGET\CC2530EB\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\MCU\CCSOC\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\OSAL\INCLUDE\ -I                         #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\AF\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\STACK\NWK\ -I     #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SEC\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\SAPI\ -I   #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\STACK\SYS\ -I C:\Users\25749\OneDrive\×À #
+#                          Ãæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\C #
+#                          C2530DB\..\..\..\..\..\COMPONENTS\STACK\ZDO\ -I    #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\ZMAC\F8W\ -I C:\Users\25749\OneDrive\×ÀÃ #
+#                          æ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\CC #
+#                          2530DB\..\..\..\..\..\COMPONENTS\ZMAC\ -I          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SADDR\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\SERVICES\SDATA\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\INCLUDE\ -I                          #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\HIGH_LEVEL\ -I                       #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\ -I                  #
+#                          C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\..\..\..\..\..\C #
+#                          OMPONENTS\MAC\LOW_LEVEL\srf04\SINGLE_CHIP\ -Ohz    #
+#    List file          =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Li #
+#                          st\mynetApp.lst                                    #
+#    Object file        =  C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects #
+#                          \zstack\Samples\mynetApp\CC2530DB\CoordinatorEB\Ob #
+#                          j\mynetApp.r51                                     #
+#                                                                             #
+#                                                                             #
+###############################################################################
+
+C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\Projects\zstack\Samples\mynetApp\Source\mynetApp.c
+      1          /**************************************************************************************************
+      2            Filename:       mynetApp.c
+      3            Revised:        $Date: 2009-03-18 15:56:27 -0700 (Wed, 18 Mar 2009) $
+      4            Revision:       $Revision: 19453 $
+      5          
+      6            Description:    Generic Application (no Profile).
+      7          
+      8          
+      9            Copyright 2004-2009 Texas Instruments Incorporated. All rights reserved.
+     10          
+     11            IMPORTANT: Your use of this Software is limited to those specific rights
+     12            granted under the terms of a software license agreement between the user
+     13            who downloaded the software, his/her employer (which must be your employer)
+     14            and Texas Instruments Incorporated (the "License").  You may not use this
+     15            Software unless you agree to abide by the terms of the License. The License
+     16            limits your use, and you acknowledge, that the Software may not be modified,
+     17            copied or distributed unless embedded on a Texas Instruments microcontroller
+     18            or used solely and exclusively in conjunction with a Texas Instruments radio
+     19            frequency transceiver, which is integrated into your product.  Other than for
+     20            the foregoing purpose, you may not use, reproduce, copy, prepare derivative
+     21            works of, modify, distribute, perform, display or sell this Software and/or
+     22            its documentation for any purpose.
+     23          
+     24            YOU FURTHER ACKNOWLEDGE AND AGREE THAT THE SOFTWARE AND DOCUMENTATION ARE
+     25            PROVIDED “AS IS?WITHOUT WARRANTY OF ANY KIND, EITHER EXPRESS OR IMPLIED, 
+     26            INCLUDING WITHOUT LIMITATION, ANY WARRANTY OF MERCHANTABILITY, TITLE, 
+     27            NON-INFRINGEMENT AND FITNESS FOR A PARTICULAR PURPOSE. IN NO EVENT SHALL
+     28            TEXAS INSTRUMENTS OR ITS LICENSORS BE LIABLE OR OBLIGATED UNDER CONTRACT,
+     29            NEGLIGENCE, STRICT LIABILITY, CONTRIBUTION, BREACH OF WARRANTY, OR OTHER
+     30            LEGAL EQUITABLE THEORY ANY DIRECT OR INDIRECT DAMAGES OR EXPENSES
+     31            INCLUDING BUT NOT LIMITED TO ANY INCIDENTAL, SPECIAL, INDIRECT, PUNITIVE
+     32            OR CONSEQUENTIAL DAMAGES, LOST PROFITS OR LOST DATA, COST OF PROCUREMENT
+     33            OF SUBSTITUTE GOODS, TECHNOLOGY, SERVICES, OR ANY CLAIMS BY THIRD PARTIES
+     34            (INCLUDING BUT NOT LIMITED TO ANY DEFENSE THEREOF), OR OTHER SIMILAR COSTS.
+     35          
+     36            Should you have any questions regarding your right to use this Software,
+     37            contact Texas Instruments Incorporated at www.TI.com. 
+     38          **************************************************************************************************/
+     39          
+     40          /*********************************************************************
+     41            This application isn't intended to do anything useful, it is
+     42            intended to be a simple example of an application's structure.
+     43          
+     44            This application sends "Hello World" to another "Generic"
+     45            application every 15 seconds.  The application will also
+     46            receive "Hello World" packets.
+     47          
+     48            The "Hello World" messages are sent/received as MSG type message.
+     49          
+     50            This applications doesn't have a profile, so it handles everything
+     51            directly - itself.
+     52          
+     53            Key control:
+     54              SW1:
+     55              SW2:  initiates end device binding
+     56              SW3:
+     57              SW4:  initiates a match description request
+     58          *********************************************************************/
+     59          
+     60          /*********************************************************************
+     61           * INCLUDES
+     62           */
+     63          #include "OSAL.h"
+     64          #include "AF.h"
+     65          #include "ZDApp.h"
+     66          #include "ZDObject.h"
+     67          #include "ZDProfile.h"
+     68          
+     69          #include "mynetApp.h"
+     70          #include "DebugTrace.h"
+     71          
+     72          #if !defined( WIN32 )
+     73            #include "OnBoard.h"
+
+    for (i=0; i<504; i++) asm("NOP");          /* Require 63us delay for all revs */                \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",228  Error[Pe169]: 
+          expected a declaration
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr CLKCONCMD" (declared at line 200 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    CLKCONCMD = (CLKCONCMD_32MHZ | OSC_32KHZ); /* Select 32MHz XOSC and the source for 32K clock */ \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",229  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    while (CLKCONSTA != (CLKCONCMD_32MHZ | OSC_32KHZ)); /* Wait for the change to be effective */   \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",230  Error[Pe169]: 
+          expected a declaration
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe147]: 
+          declaration is incompatible with
+          "unsigned char volatile __sfr SLEEPCMD" (declared at line 190 of
+          "C:\Program Files (x86)\IAR Systems\Embedded Workbench 6.0
+          Evaluation\8051\inc\ioCC2530.h")
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    SLEEPCMD |= OSC_PD;                        /* turn off 16MHz RC */                              \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",231  Error[Pe065]: 
+          expected a ";"
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe007]: 
+          unrecognized token
+
+    PREFETCH_ENABLE();                                             \//´ò¿ªÁËÒ»¸ö¼Ä´æÆ÷£¬»º´æÊ¹ÄÜ£¬¸úCPUµÄÈ¡Ö¸ÁîÓÐ¹Ø
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",234  Error[Pe169]: 
+          expected a declaration
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                       ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe007]: 
+          unrecognized token
+
+    LED1_DDR |= LED1_BV;                                           \//½«P1_0¡¢P1_1¡¢P1_4Èý¸ö¿ÚÅäÖÃÎªÊä³ö
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",237  Error[Pe169]: 
+          expected a declaration
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P1DIR"
+          (declared at line 268 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    LED3_DDR |= LED3_BV;                                           \
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    LED3_DDR |= LED3_BV;                                           \
+             ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",239  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe077]: 
+          this declaration has no storage class or type specifier
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe147]: 
+          declaration is incompatible with "unsigned char volatile __sfr P0INP"
+          (declared at line 131 of "C:\Program Files (x86)\IAR
+          Systems\Embedded Workbench 6.0 Evaluation\8051\inc\ioCC2530.h")
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Be022]: 
+          location address not allowed for initialized variables (writable
+          variables without the __no_init attribute)
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe065]: 
+          expected a ";"
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe007]: 
+          unrecognized token
+
+    P0INP |= PUSH2_BV;                                             \//½«P0_0ÅäÖÃÎªÈýÌ¬
+                                                                   ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\TARGET\CC2530EB\hal_board_cfg.h",242  Error[Pe169]: 
+          expected a declaration
+
+  typedef void (*halUARTCBack_t) (uint8 port, uint8 event);
+                                                          ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",119  Warning[Pe012]: 
+          parsing restarts here after previous syntax error
+
+    halUARTCBack_t      callBackFunc;
+    ^
+"C:\Users\25749\OneDrive\×ÀÃæ\Zigbee\mynet\COMPONENTS\HAL\INCLUDE\hal_uart.h",141  Error[Pe020]: 
+          identifier "halUARTCBack_t" is undefined
+     74          #endif
+     75          
+     76          /* HAL */
+     77          #include "hal_lcd.h"
+     78          #include "hal_led.h"
+     79          #include "hal_key.h"
+     80          #include "hal_uart.h"
+     81          #include"zhanglab.h"
+     82          
+     83          /*********************************************************************
+     84           * MACROS
+     85           */
+     86          
+     87          /*********************************************************************
+     88           * CONSTANTS
+     89           */
+     90          
+     91          /*********************************************************************
+     92           * TYPEDEFS
+     93           */
+     94          
+     95          /*********************************************************************
+     96           * GLOBAL VARIABLES
+     97           */
+     98          
+     99          // This list should be filled with Application specific Cluster IDs.
+    100          const cId_t mynetApp_ClusterList[mynetApp_MAX_CLUSTERS] =
+    101          {
+    102            mynetApp_CLUSTERID
+    103          };
+    104          
+    105          const SimpleDescriptionFormat_t mynetApp_SimpleDesc =
+    106          {
+    107            mynetApp_ENDPOINT,              //  int Endpoint;
+    108            mynetApp_PROFID,                //  uint16 AppProfId[2];
+    109            mynetApp_DEVICEID,              //  uint16 AppDeviceId[2];
+    110            mynetApp_DEVICE_VERSION,        //  int   AppDevVer:4;
+    111            mynetApp_FLAGS,                 //  int   AppFlags:4;
+    112            mynetApp_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    113            (cId_t *)mynetApp_ClusterList,  //  byte *pAppInClusterList;
+    114            mynetApp_MAX_CLUSTERS,          //  byte  AppNumInClusters;
+    115            (cId_t *)mynetApp_ClusterList   //  byte *pAppInClusterList;
+    116          };
+    117          
+    118          // This is the Endpoint/Interface description.  It is defined here, but
+    119          // filled-in in mynetApp_Init().  Another way to go would be to fill
+    120          // in the structure here and make it a "const" (in code space).  The
+    121          // way it's defined in this sample app it is define in RAM.
+    122          endPointDesc_t mynetApp_epDesc;
+    123          
+    124          /*********************************************************************
+    125           * EXTERNAL VARIABLES
+    126           */
+    127          
+    128          /*********************************************************************
+    129           * EXTERNAL FUNCTIONS
+    130           */
+    131          
+    132          /*********************************************************************
+    133           * LOCAL VARIABLES
+    134           */
+    135          byte mynetApp_TaskID;   // Task ID for internal task/event processing
+    136                                    // This variable will be received when
+    137                                    // mynetApp_Init() is called.
+    138          devStates_t mynetApp_NwkState;
+    139          
+    140          
+    141          byte mynetApp_TransID;  // This is the unique message ID (counter)
+    142          
+    143          afAddrType_t mynetApp_DstAddr;
+    144          
+    145          /*********************************************************************
+    146           * LOCAL FUNCTIONS
+    147           */
+    148          void mynetApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg );
+    149          void mynetApp_HandleKeys( byte shift, byte keys );
+    150          void mynetApp_MessageMSGCB( afIncomingMSGPacket_t *pckt );
+    151          void mynetApp_SendTheMessage( void );
+    152          
+    153          /*********************************************************************
+    154           * NETWORK LAYER CALLBACKS
+    155           */
+    156          
+    157          /*********************************************************************
+    158           * PUBLIC FUNCTIONS
+    159           */
+    160          
+    161          /*********************************************************************
+    162           * @fn      mynetApp_Init
+    163           *
+    164           * @brief   Initialization function for the Generic App Task.
+    165           *          This is called during initialization and should contain
+    166           *          any application specific initialization (ie. hardware
+    167           *          initialization/setup, table initialization, power up
+    168           *          notificaiton ... ).
+    169           *
+    170           * @param   task_id - the ID assigned by OSAL.  This ID should be
+    171           *                    used to send messages and set timers.
+    172           *
+    173           * @return  none
+    174           */
+    175          void mynetApp_Init( byte task_id )
+    176          {
+    177            mynetApp_TaskID = task_id;
+    178            mynetApp_NwkState = DEV_INIT;
+    179            mynetApp_TransID = 0;
+    180          
+    181            // Device hardware initialization can be added here or in main() (Zmain.c).
+    182            // If the hardware is application specific - add it here.
+    183            // If the hardware is other parts of the device add it in main().
+    184          
+    185            mynetApp_DstAddr.addrMode = (afAddrMode_t)AddrNotPresent;
+    186            mynetApp_DstAddr.endPoint = 0;
+    187            mynetApp_DstAddr.addr.shortAddr = 0;
+    188          
+    189            // Fill out the endpoint description.
+    190            mynetApp_epDesc.endPoint = mynetApp_ENDPOINT;
+    191            mynetApp_epDesc.task_id = &mynetApp_TaskID;
+    192            mynetApp_epDesc.simpleDesc
+    193                      = (SimpleDescriptionFormat_t *)&mynetApp_SimpleDesc;
+    194            mynetApp_epDesc.latencyReq = noLatencyReqs;
+    195          
+    196            // Register the endpoint description with the AF
+    197            afRegister( &mynetApp_epDesc );
+    198          
+    199            // Register for all key events - This app will handle all key events
+    200            RegisterForKeys( mynetApp_TaskID );
+    201          
+    202            // Update the display
+    203          #if defined ( LCD_SUPPORTED )
+    204              HalLcdWriteString( "mynetApp", HAL_LCD_LINE_1 );
+    205          #endif
+    206              
+    207            ZDO_RegisterForZDOMsg( mynetApp_TaskID, End_Device_Bind_rsp );
+    208            ZDO_RegisterForZDOMsg( mynetApp_TaskID, Match_Desc_rsp );
+    209          }
+    210          
+    211          /*********************************************************************
+    212           * @fn      mynetApp_ProcessEvent
+    213           *
+    214           * @brief   Generic Application Task event processor.  This function
+    215           *          is called to process all events for the task.  Events
+    216           *          include timers, messages and any other user defined events.
+    217           *
+    218           * @param   task_id  - The OSAL assigned task ID.
+    219           * @param   events - events to process.  This is a bit map and can
+    220           *                   contain more than one event.
+    221           *
+    222           * @return  none
+    223           */
+    224          UINT16 mynetApp_ProcessEvent( byte task_id, UINT16 events )
+    225          {
+    226            afIncomingMSGPacket_t *MSGpkt;
+    227            afDataConfirm_t *afDataConfirm;
+    228          
+    229            // Data Confirmation message fields
+    230            byte sentEP;
+    231            ZStatus_t sentStatus;
+    232            byte sentTransID;       // This should match the value sent
+    233            (void)task_id;  // Intentionally unreferenced parameter
+    234          
+    235            if ( events & SYS_EVENT_MSG )
+    236            {
+    237              MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( mynetApp_TaskID );
+    238              while ( MSGpkt )
+    239              {
+    240                switch ( MSGpkt->hdr.event )
+    241                {
+    242                  case ZDO_CB_MSG:
+    243                    mynetApp_ProcessZDOMsgs( (zdoIncomingMsg_t *)MSGpkt );
+    244                    break;
+    245                    
+    246                  case KEY_CHANGE:
+    247                    mynetApp_HandleKeys( ((keyChange_t *)MSGpkt)->state, ((keyChange_t *)MSGpkt)->keys );
+    248                    break;
+    249          
+    250                  case AF_DATA_CONFIRM_CMD:
+    251                    // This message is received as a confirmation of a data packet sent.
+    252                    // The status is of ZStatus_t type [defined in ZComDef.h]
+    253                    // The message fields are defined in AF.h
+    254                    afDataConfirm = (afDataConfirm_t *)MSGpkt;
+    255                    sentEP = afDataConfirm->endpoint;
+    256                    sentStatus = afDataConfirm->hdr.status;
+    257                    sentTransID = afDataConfirm->transID;
+    258                    (void)sentEP;
+    259                    (void)sentTransID;
+    260          
+    261                    // Action taken when confirmation is received.
+    262                    if ( sentStatus != ZSuccess )
+    263                    {
+    264                      // The data wasn't delivered -- Do something
+    265                    }
+    266                    break;
+    267          
+    268                  case AF_INCOMING_MSG_CMD:
+    269                    mynetApp_MessageMSGCB( MSGpkt );
+    270                    break;
+    271          
+    272                  case ZDO_STATE_CHANGE:
+    273                    mynetApp_NwkState = (devStates_t)(MSGpkt->hdr.status);
+    274                    if ( (mynetApp_NwkState == DEV_ZB_COORD)
+    275                        || (mynetApp_NwkState == DEV_ROUTER)
+    276                        || (mynetApp_NwkState == DEV_END_DEVICE) )
+    277                    {
+    278                      // Start sending "the" message in a regular interval.
+    279          //            osal_start_timerEx( mynetApp_TaskID,
+    280          //                                mynetApp_SEND_MSG_EVT,
+    281          //                              mynetApp_SEND_MSG_TIMEOUT );
+    282                    }
+    283                    if(mynetApp_NwkState == DEV_ZB_COORD)
+    284                    {
+    285                      lightupD1();
+    286                      lightoffD2();
+    287                    }
+    288                    if(mynetApp_NwkState == DEV_ROUTER)
+    289                    {
+    290                      lightupD2();
+    291                      lightoffD1();
+    292                    }
+    293                    if(mynetApp_NwkState == DEV_END_DEVICE)
+    294                    {
+    295                      lightupD3();
+    296                      lightoffD1();
+    297                      lightoffD2();
+    298                    }
+    299                    break;
+    300          
+    301                  default:
+    302                    break;
+    303                }
+    304          
+    305                // Release the memory
+    306                osal_msg_deallocate( (uint8 *)MSGpkt );
+    307          
+    308                // Next
+    309                MSGpkt = (afIncomingMSGPacket_t *)osal_msg_receive( mynetApp_TaskID );
+    310              }
+    311          
+    312              // return unprocessed events
+    313              return (events ^ SYS_EVENT_MSG);
+    314            }
+    315          
+    316            // Send a message out - This event is generated by a timer
+    317            //  (setup in mynetApp_Init()).
+    318            if ( events & mynetApp_SEND_MSG_EVT )
+    319            {
+    320              // Send "the" message
+    321              mynetApp_SendTheMessage();
+    322          
+    323              // Setup to send message again
+    324              osal_start_timerEx( mynetApp_TaskID,
+    325                                  mynetApp_SEND_MSG_EVT,
+    326                                mynetApp_SEND_MSG_TIMEOUT );
+    327          
+    328              // return unprocessed events
+    329              return (events ^ mynetApp_SEND_MSG_EVT);
+    330            }
+    331          
+    332            // Discard unknown events
+    333            return 0;
+    334          }
+    335          
+    336          /*********************************************************************
+    337           * Event Generation Functions
+    338           */
+    339          
+    340          /*********************************************************************
+    341           * @fn      mynetApp_ProcessZDOMsgs()
+    342           *
+    343           * @brief   Process response messages
+    344           *
+    345           * @param   none
+    346           *
+    347           * @return  none
+    348           */
+    349          void mynetApp_ProcessZDOMsgs( zdoIncomingMsg_t *inMsg )
+    350          {
+    351            switch ( inMsg->clusterID )
+    352            {
+    353              case End_Device_Bind_rsp:
+    354                if ( ZDO_ParseBindRsp( inMsg ) == ZSuccess )
+    355                {
+    356                  // Light LED
+    357                  HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+    358                }
+    359          #if defined(BLINK_LEDS)
+    360                else
+    361                {
+    362                  // Flash LED to show failure
+    363                  HalLedSet ( HAL_LED_4, HAL_LED_MODE_FLASH );
+    364                }
+    365          #endif
+    366                break;
+    367          
+    368              case Match_Desc_rsp:
+    369                {
+    370                  ZDO_ActiveEndpointRsp_t *pRsp = ZDO_ParseEPListRsp( inMsg );
+    371                  if ( pRsp )
+    372                  {
+    373                    if ( pRsp->status == ZSuccess && pRsp->cnt )
+    374                    {
+    375                      mynetApp_DstAddr.addrMode = (afAddrMode_t)Addr16Bit;
+    376                      mynetApp_DstAddr.addr.shortAddr = pRsp->nwkAddr;
+    377                      // Take the first endpoint, Can be changed to search through endpoints
+    378                      mynetApp_DstAddr.endPoint = pRsp->epList[0];
+    379          
+    380                      // Light LED
+    381                      HalLedSet( HAL_LED_4, HAL_LED_MODE_ON );
+    382                    }
+    383                    osal_mem_free( pRsp );
+    384                  }
+    385                }
+    386                break;
+    387            }
+    388          }
+    389          
+    390          /*********************************************************************
+    391           * @fn      mynetApp_HandleKeys
+    392           *
+    393           * @brief   Handles all key events for this device.
+    394           *
+    395           * @param   shift - true if in shift/alt.
+    396           * @param   keys - bit field for key events. Valid entries:
+    397           *                 HAL_KEY_SW_4
+    398           *                 HAL_KEY_SW_3
+    399           *                 HAL_KEY_SW_2
+    400           *                 HAL_KEY_SW_1
+    401           *
+    402           * @return  none
+    403           */
+    404          void mynetApp_HandleKeys( byte shift, byte keys )
+    405          {
+    406            zAddrType_t dstAddr;
+    407            
+    408            // Shift is used to make each button/switch dual purpose.
+    409            if ( shift )
+    410            {
+    411              if ( keys & HAL_KEY_SW_1 )
+    412              {
+    413              }
+    414              if ( keys & HAL_KEY_SW_2 )
+    415              {
+    416              }
+    417              if ( keys & HAL_KEY_SW_3 )
+    418              {
+    419              }
+    420              if ( keys & HAL_KEY_SW_4 )
+    421              {
+    422              }
+    423            }
+    424            else
+    425            {
+    426              if ( keys & HAL_KEY_SW_1 )
+    427              {
+    428              }
+    429          
+    430              if ( keys & HAL_KEY_SW_2 )
+    431              {
+    432                HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+    433          
+    434                // Initiate an End Device Bind Request for the mandatory endpoint
+    435                dstAddr.addrMode = Addr16Bit;
+    436                dstAddr.addr.shortAddr = 0x0000; // Coordinator
+    437                ZDP_EndDeviceBindReq( &dstAddr, NLME_GetShortAddr(), 
+    438                                      mynetApp_epDesc.endPoint,
+    439                                      mynetApp_PROFID,
+    440                                      mynetApp_MAX_CLUSTERS, (cId_t *)mynetApp_ClusterList,
+    441                                      mynetApp_MAX_CLUSTERS, (cId_t *)mynetApp_ClusterList,
+    442                                      FALSE );
+    443              }
+    444          
+    445              if ( keys & HAL_KEY_SW_3 )
+    446              {
+    447              }
+    448          
+    449              if ( keys & HAL_KEY_SW_4 )
+    450              {
+    451                HalLedSet ( HAL_LED_4, HAL_LED_MODE_OFF );
+    452                // Initiate a Match Description Request (Service Discovery)
+    453                dstAddr.addrMode = AddrBroadcast;
+    454                dstAddr.addr.shortAddr = NWK_BROADCAST_SHORTADDR;
+    455                ZDP_MatchDescReq( &dstAddr, NWK_BROADCAST_SHORTADDR,
+    456                                  mynetApp_PROFID,
+    457                                  mynetApp_MAX_CLUSTERS, (cId_t *)mynetApp_ClusterList,
+    458                                  mynetApp_MAX_CLUSTERS, (cId_t *)mynetApp_ClusterList,
+    459                                  FALSE );
+    460              }
+    461            }
+    462          }
+    463          
+    464          /*********************************************************************
+    465           * LOCAL FUNCTIONS
+    466           */
+    467          
+    468          /*********************************************************************
+    469           * @fn      mynetApp_MessageMSGCB
+    470           *
+    471           * @brief   Data message processor callback.  This function processes
+    472           *          any incoming data - probably from other devices.  So, based
+    473           *          on cluster ID, perform the intended action.
+    474           *
+    475           * @param   none
+    476           *
+    477           * @return  none
+    478           */
+    479          void mynetApp_MessageMSGCB( afIncomingMSGPacket_t *pkt )
+    480          {
+    481            switch ( pkt->clusterId )
+    482            {
+    483              case mynetApp_CLUSTERID:
+    484                // "the" message
+    485          #if defined( LCD_SUPPORTED )
+    486                HalLcdWriteScreen( (char*)pkt->cmd.Data, "rcvd" );
+    487          #elif defined( WIN32 )
+    488                WPRINTSTR( pkt->cmd.Data );
+    489          #endif
+    490                break;
+    491            }
+    492          }
+    493          
+    494          /*********************************************************************
+    495           * @fn      mynetApp_SendTheMessage
+    496           *
+    497           * @brief   Send "the" message.
+    498           *
+    499           * @param   none
+    500           *
+    501           * @return  none
+    502           */
+    503          void mynetApp_SendTheMessage( void )
+    504          {
+    505            char theMessageData[] = "Hello World";
+    506          
+    507            if ( AF_DataRequest( &mynetApp_DstAddr, &mynetApp_epDesc,
+    508                                 mynetApp_CLUSTERID,
+    509                                 (byte)osal_strlen( theMessageData ) + 1,
+    510                                 (byte *)&theMessageData,
+    511                                 &mynetApp_TransID,
+    512                                 AF_DISCV_ROUTE, AF_DEFAULT_RADIUS ) == afStatus_SUCCESS )
+    513            {
+    514              // Successfully requested to be sent.
+    515            }
+    516            else
+    517            {
+    518              // Error occurred in request to send.
+    519            }
+    520          }
+    521          
+    522          /*********************************************************************
+    523          *********************************************************************/
+
+Errors: 25
+Warnings: 2
