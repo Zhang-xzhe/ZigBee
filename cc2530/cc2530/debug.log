@@ -1,0 +1,30 @@
+[1006/092637:ERROR:backend_impl.cc(2020)] Corrupt Index file
+[1006/092637:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[1006/092637:ERROR:cache_util.cc(134)] Unable to move cache folder C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\BrowserCache to C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\old_BrowserCache_000
+[1006/092637:ERROR:cache_creator.cc(129)] Unable to create cache
+[1012/104028:ERROR:backend_impl.cc(2020)] Corrupt Index file
+[1012/104028:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[1012/104028:ERROR:cache_util.cc(134)] Unable to move cache folder C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\BrowserCache to C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\old_BrowserCache_000
+[1012/104028:ERROR:cache_creator.cc(129)] Unable to create cache
+[1012/205934:ERROR:backend_impl.cc(2020)] Corrupt Index file
+[1012/205934:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[1012/205934:ERROR:cache_util.cc(134)] Unable to move cache folder C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\BrowserCache to C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\old_BrowserCache_000
+[1012/205934:ERROR:cache_creator.cc(129)] Unable to create cache
+[1013/153601:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1013/153601:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/010932:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/035532:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/041230:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/041240:ERROR:browser_gpu_channel_host_factory.cc(119)] Failed to launch GPU process.
+[1014/090422:ERROR:backend_impl.cc(2020)] Corrupt Index file
+[1014/090422:ERROR:cache_util_win.cc(20)] Unable to move the cache: 5
+[1014/090422:ERROR:cache_util.cc(134)] Unable to move cache folder C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\BrowserCache to C:\ProgramData\Altium\Altium Designer {AE0AECD1-0480-4FB3-9524-718A2D3AA22C}\old_BrowserCache_000
+[1014/090422:ERROR:cache_creator.cc(129)] Unable to create cache
+[1014/122028:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/211541:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/211545:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/211549:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/211549:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/223631:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1014/223650:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
+[1015/080256:WARNING:dns_config_service_win.cc(665)] Failed to read DnsConfig.
